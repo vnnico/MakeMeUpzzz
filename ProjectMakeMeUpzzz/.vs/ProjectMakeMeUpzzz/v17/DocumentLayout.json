@@ -1,12 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\h0012\\Documents\\RepoMakeMeUpzzz\\ProjectMakeMeUpzzz\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\repomakemeupzzz\\projectmakemeupzzz\\projectmakemeupzzz\\views\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\MakeMeUpzzz\\ProjectMakeMeUpzzz\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,19 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\RepoMakeMeUpzzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Login.aspx",
-              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\Login.aspx",
-              "ToolTip": "C:\\Users\\h0012\\Documents\\RepoMakeMeUpzzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Login.aspx",
-              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-10T14:18:43.836Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

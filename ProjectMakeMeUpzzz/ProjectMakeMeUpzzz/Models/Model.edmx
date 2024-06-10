@@ -19,7 +19,7 @@
             <PropertyRef Name="MakeupBrandID" />
           </Key>
           <Property Name="MakeupBrandID" Type="int" Nullable="false" />
-          <Property Name="MakeupBrandName" Type="nchar" MaxLength="100" />
+          <Property Name="MakeupBrandName" Type="varchar" MaxLength="100" />
           <Property Name="MakeupBrandRating" Type="int" />
         </EntityType>
         <EntityType Name="Makeups">
@@ -27,7 +27,7 @@
             <PropertyRef Name="MakeupID" />
           </Key>
           <Property Name="MakeupID" Type="int" Nullable="false" />
-          <Property Name="MakeupName" Type="nchar" MaxLength="100" />
+          <Property Name="MakeupName" Type="varchar" MaxLength="100" />
           <Property Name="MakeupPrice" Type="int" />
           <Property Name="MakeupWeight" Type="int" />
           <Property Name="MakeupTypeID" Type="int" Nullable="false" />
@@ -38,7 +38,7 @@
             <PropertyRef Name="MakeupTypeID" />
           </Key>
           <Property Name="MakeupTypeID" Type="int" Nullable="false" />
-          <Property Name="MakeupTypeName" Type="nchar" MaxLength="100" />
+          <Property Name="MakeupTypeName" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="TransactionDetails">
           <Key>
@@ -55,19 +55,19 @@
           <Property Name="TransactionID" Type="int" Nullable="false" />
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="TransactionDate" Type="date" />
-          <Property Name="Status" Type="nchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
           <Property Name="UserID" Type="int" Nullable="false" />
-          <Property Name="Username" Type="nchar" MaxLength="100" />
-          <Property Name="UserEmail" Type="nchar" MaxLength="150" />
+          <Property Name="Username" Type="varchar" MaxLength="100" />
+          <Property Name="UserEmail" Type="varchar" MaxLength="150" />
           <Property Name="UserDOB" Type="date" />
-          <Property Name="UserGender" Type="nchar" MaxLength="10" />
-          <Property Name="UserRole" Type="nchar" MaxLength="10" />
-          <Property Name="UserPassword" Type="nchar" MaxLength="100" />
+          <Property Name="UserGender" Type="varchar" MaxLength="10" />
+          <Property Name="UserRole" Type="varchar" MaxLength="10" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="100" />
         </EntityType>
         <Association Name="FK_Carts_Makeups">
           <End Role="Makeups" Type="Self.Makeups" Multiplicity="1" />
@@ -211,7 +211,7 @@
             <PropertyRef Name="MakeupBrandID" />
           </Key>
           <Property Name="MakeupBrandID" Type="Int32" Nullable="false" />
-          <Property Name="MakeupBrandName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="MakeupBrandName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="MakeupBrandRating" Type="Int32" />
           <NavigationProperty Name="Makeups" Relationship="Self.FK_Makeups_MakeupBrands" FromRole="MakeupBrands" ToRole="Makeups" />
         </EntityType>
@@ -220,7 +220,7 @@
             <PropertyRef Name="MakeupID" />
           </Key>
           <Property Name="MakeupID" Type="Int32" Nullable="false" />
-          <Property Name="MakeupName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="MakeupName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="MakeupPrice" Type="Int32" />
           <Property Name="MakeupWeight" Type="Int32" />
           <Property Name="MakeupTypeID" Type="Int32" Nullable="false" />
@@ -235,7 +235,7 @@
             <PropertyRef Name="MakeupTypeID" />
           </Key>
           <Property Name="MakeupTypeID" Type="Int32" Nullable="false" />
-          <Property Name="MakeupTypeName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="MakeupTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Makeups" Relationship="Self.FK_Makeups_MakeupTypes" FromRole="MakeupTypes" ToRole="Makeups" />
         </EntityType>
         <EntityType Name="TransactionDetail">
@@ -254,8 +254,8 @@
           </Key>
           <Property Name="TransactionID" Type="Int32" Nullable="false" />
           <Property Name="UserID" Type="Int32" Nullable="false" />
-          <Property Name="TransactionDate" Type="DateTime" />
-          <Property Name="Status" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="TransactionDate" Type="DateTime" Precision="0" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TransactionDetail" Relationship="Self.FK_TransactionDetails_TransactionHeaders" FromRole="TransactionHeaders" ToRole="TransactionDetails" />
           <NavigationProperty Name="User" Relationship="Self.FK_TransactionHeaders_Users" FromRole="TransactionHeaders" ToRole="Users" />
         </EntityType>
@@ -264,12 +264,12 @@
             <PropertyRef Name="UserID" />
           </Key>
           <Property Name="UserID" Type="Int32" Nullable="false" />
-          <Property Name="Username" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-          <Property Name="UserEmail" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
-          <Property Name="UserDOB" Type="DateTime" />
-          <Property Name="UserGender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="UserPassword" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserEmail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="UserDOB" Type="DateTime" Precision="0" />
+          <Property Name="UserGender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Carts" Relationship="Self.FK_Carts_Users" FromRole="Users" ToRole="Carts" />
           <NavigationProperty Name="TransactionHeaders" Relationship="Self.FK_TransactionHeaders_Users" FromRole="Users" ToRole="TransactionHeaders" />
         </EntityType>
@@ -357,7 +357,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DatabaseEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Carts" EntityType="Self.Cart" />
           <EntitySet Name="MakeupBrands" EntityType="Self.MakeupBrand" />
           <EntitySet Name="Makeups" EntityType="Self.Makeup" />
@@ -399,7 +399,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities1">
           <EntitySetMapping Name="Carts">
             <EntityTypeMapping TypeName="DatabaseModel.Cart">
               <MappingFragment StoreEntitySet="Carts">
@@ -488,6 +488,7 @@
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
