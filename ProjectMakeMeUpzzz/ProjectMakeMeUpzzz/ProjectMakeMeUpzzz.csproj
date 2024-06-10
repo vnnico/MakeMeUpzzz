@@ -74,6 +74,7 @@
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Views\Home.aspx" />
+    <Content Include="Views\Login.aspx" />
     <Content Include="Views\ManageMakeUp.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="Views\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ManageMakeUp.aspx.cs">
       <DependentUpon>ManageMakeUp.aspx</DependentUpon>
