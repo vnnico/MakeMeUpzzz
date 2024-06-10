@@ -254,7 +254,7 @@
           </Key>
           <Property Name="TransactionID" Type="Int32" Nullable="false" />
           <Property Name="UserID" Type="Int32" Nullable="false" />
-          <Property Name="TransactionDate" Type="DateTime" />
+          <Property Name="TransactionDate" Type="DateTime" Precision="0" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="TransactionDetail" Relationship="Self.FK_TransactionDetails_TransactionHeaders" FromRole="TransactionHeaders" ToRole="TransactionDetails" />
           <NavigationProperty Name="User" Relationship="Self.FK_TransactionHeaders_Users" FromRole="TransactionHeaders" ToRole="Users" />
@@ -266,7 +266,7 @@
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <Property Name="Username" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="UserEmail" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
-          <Property Name="UserDOB" Type="DateTime" />
+          <Property Name="UserDOB" Type="DateTime" Precision="0" />
           <Property Name="UserGender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="UserPassword" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
@@ -357,7 +357,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DatabaseEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Carts" EntityType="Self.Cart" />
           <EntitySet Name="MakeupBrands" EntityType="Self.MakeupBrand" />
           <EntitySet Name="Makeups" EntityType="Self.Makeup" />
@@ -399,7 +399,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities1">
           <EntitySetMapping Name="Carts">
             <EntityTypeMapping TypeName="DatabaseModel.Cart">
               <MappingFragment StoreEntitySet="Carts">
@@ -488,6 +488,7 @@
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

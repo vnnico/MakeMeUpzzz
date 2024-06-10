@@ -2,4 +2,5 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="server">
     <h1>Manage Make Up terdiri dari 3 tabel</h1>
+    <asp:GridView ID="GridViewManageMakeUp" runat="server"></asp:GridView>
 </asp:Content>
