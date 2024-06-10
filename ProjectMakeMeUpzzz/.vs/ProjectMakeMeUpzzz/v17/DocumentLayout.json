@@ -1,12 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\ProjectMakeMeUpzzz\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Nata\\source\\repos\\PSDTEST\\ProjectMakeMeUpzzz\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\nata\\source\\repos\\psdtest\\projectmakemeupzzz\\projectmakemeupzzz\\factory\\makeupfactories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\factory\\makeupfactories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MakeupFactories.cs",
+              "DocumentMoniker": "C:\\Users\\Nata\\source\\repos\\PSDTEST\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Factory\\MakeupFactories.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Factory\\MakeupFactories.cs",
+              "ToolTip": "C:\\Users\\Nata\\source\\repos\\PSDTEST\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Factory\\MakeupFactories.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Factory\\MakeupFactories.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T14:34:34.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
