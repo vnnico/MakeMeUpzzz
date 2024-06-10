@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="ProjectMakeMeUpzzz.Views.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>MakeMeUpzz</title>
+ 
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav>
+            <asp:Button ID="ButtonManageMakeUp" runat="server" Text="Manage Make Up" OnClick="ButtonManageMakeUp_Click" />
+            <asp:Button ID="ButtonHome" runat="server" Text="Home" OnClick="ButtonHome_Click" />
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
