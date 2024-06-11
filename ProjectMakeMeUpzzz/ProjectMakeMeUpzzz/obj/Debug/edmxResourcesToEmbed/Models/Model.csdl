@@ -16,7 +16,7 @@
       <PropertyRef Name="MakeupBrandID" />
     </Key>
     <Property Name="MakeupBrandID" Type="Int32" Nullable="false" />
-    <Property Name="MakeupBrandName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="MakeupBrandName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="MakeupBrandRating" Type="Int32" />
     <NavigationProperty Name="Makeups" Relationship="Self.FK_Makeups_MakeupBrands" FromRole="MakeupBrands" ToRole="Makeups" />
   </EntityType>
@@ -25,7 +25,7 @@
       <PropertyRef Name="MakeupID" />
     </Key>
     <Property Name="MakeupID" Type="Int32" Nullable="false" />
-    <Property Name="MakeupName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="MakeupName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="MakeupPrice" Type="Int32" />
     <Property Name="MakeupWeight" Type="Int32" />
     <Property Name="MakeupTypeID" Type="Int32" Nullable="false" />
@@ -40,7 +40,7 @@
       <PropertyRef Name="MakeupTypeID" />
     </Key>
     <Property Name="MakeupTypeID" Type="Int32" Nullable="false" />
-    <Property Name="MakeupTypeName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="MakeupTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Makeups" Relationship="Self.FK_Makeups_MakeupTypes" FromRole="MakeupTypes" ToRole="Makeups" />
   </EntityType>
   <EntityType Name="TransactionDetail">
@@ -60,7 +60,7 @@
     <Property Name="TransactionID" Type="Int32" Nullable="false" />
     <Property Name="UserID" Type="Int32" Nullable="false" />
     <Property Name="TransactionDate" Type="DateTime" Precision="0" />
-    <Property Name="Status" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="TransactionDetail" Relationship="Self.FK_TransactionDetails_TransactionHeaders" FromRole="TransactionHeaders" ToRole="TransactionDetails" />
     <NavigationProperty Name="User" Relationship="Self.FK_TransactionHeaders_Users" FromRole="TransactionHeaders" ToRole="Users" />
   </EntityType>
@@ -69,12 +69,12 @@
       <PropertyRef Name="UserID" />
     </Key>
     <Property Name="UserID" Type="Int32" Nullable="false" />
-    <Property Name="Username" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-    <Property Name="UserEmail" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserEmail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="UserDOB" Type="DateTime" Precision="0" />
-    <Property Name="UserGender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="UserPassword" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="UserGender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Carts" Relationship="Self.FK_Carts_Users" FromRole="Users" ToRole="Carts" />
     <NavigationProperty Name="TransactionHeaders" Relationship="Self.FK_TransactionHeaders_Users" FromRole="Users" ToRole="TransactionHeaders" />
   </EntityType>

@@ -18,6 +18,7 @@ namespace ProjectMakeMeUpzzz.Handlers
             user.UserEmail = userEmail;
             user.UserDOB = userDOB;
             user.UserGender = userGender;
+
             if (UserRepositories.UpdateUser(user) == 0)
             {
                 return new Response<User>
@@ -126,7 +127,7 @@ namespace ProjectMakeMeUpzzz.Handlers
             };
         }
 
-        public static Response<User> Register(string username, string email, DateTime dob, string gender, string password)
+        public static Response<User> Register(string username, string email, DateTime dob, string gender, String role, string password)
         {
             if (UserRepositories.GetUserByUsername(username) != null)
             {
@@ -138,9 +139,9 @@ namespace ProjectMakeMeUpzzz.Handlers
                 };
             }
 
-            User user = UserFactories.CreateUser(GenerateID(), username, email, dob, gender, password);
+            User user = UserFactories.Create(GenerateID(), username, email, dob, gender,role, password);
 
-            if (UserRepositories.InsertUser(user) == 0)
+            if (UserRepositories.RegisterUser(user) == 0)
             {
                 return new Response<User>
                 {

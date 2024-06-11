@@ -89,6 +89,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\buatest.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\InsertMakeUp.aspx" />
     <Content Include="Views\ManageMakeUp.aspx" />
@@ -161,6 +162,13 @@
     <Compile Include="Repositories\TransactionDetailRepositories.cs" />
     <Compile Include="Repositories\TransactionHeaderRepositories.cs" />
     <Compile Include="Repositories\UserRepositories.cs" />
+    <Compile Include="Views\buatest.aspx.cs">
+      <DependentUpon>buatest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\buatest.aspx.designer.cs">
+      <DependentUpon>buatest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -7,23 +7,29 @@ using ProjectMakeMeUpzzz.Models;
 namespace ProjectMakeMeUpzzz.Factory
 {
     public class UserFactories
+
     {
-        public static User CreateUser(int userId, string username, string userEmail, DateTime userDOB, string userGender, string userRole, string userPassword)
+        public static User Create(int userId, string username, string userEmail, DateTime userDOB, string userGender, string userRole,string userPassword)
         {
-            return new User
-            {
-                UserID = userId,
-                Username = username,
-                UserEmail = userEmail,
-                UserDOB = userDOB,
-                UserGender = userGender,
-                UserRole = userRole,
-            };
+
+            User user = new User();
+            user.UserID = userId;
+            user.Username = username;
+            user.UserEmail = userEmail;
+            user.UserDOB = userDOB;
+            user.UserGender = userGender;
+            user.UserRole = userRole;
+            user.UserPassword = userPassword;
+            return user;
+          
         }
 
+        
+        /*
         internal static User CreateUser(int v, string username, string email, DateTime dob, string gender, string password)
         {
             throw new NotImplementedException();
-        }
+        } */
+        
     }
 }

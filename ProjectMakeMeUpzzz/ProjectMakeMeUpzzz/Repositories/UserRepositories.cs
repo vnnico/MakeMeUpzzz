@@ -8,12 +8,7 @@ namespace ProjectMakeMeUpzzz.Repositories
 {
     public class UserRepositories
     {
-        private static readonly DatabaseEntities1 db = new DatabaseEntities1();
-
-        public static User GetLastUser()
-        {
-            return db.Users.ToList().LastOrDefault();
-        }
+        private static DatabaseEntities1 db = new DatabaseEntities1();
 
         public static List<User> GetAllUsers()
         {
@@ -25,14 +20,22 @@ namespace ProjectMakeMeUpzzz.Repositories
             return db.Users.Find(id);
         }
 
+
+        public static User GetLastUser()
+        {
+            return db.Users.ToList().LastOrDefault();
+        }
+
+
         public static User GetUserByUsername(string username)
         {
             return db.Users.Where(u => u.Username == username).FirstOrDefault();
         }
 
-        public static int InsertUser(User user)
+        public static int RegisterUser(User user)
         {
             db.Users.Add(user);
+
             return db.SaveChanges();
         }
 

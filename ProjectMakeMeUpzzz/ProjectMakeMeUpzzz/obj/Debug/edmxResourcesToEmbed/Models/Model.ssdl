@@ -14,7 +14,7 @@
       <PropertyRef Name="MakeupBrandID" />
     </Key>
     <Property Name="MakeupBrandID" Type="int" Nullable="false" />
-    <Property Name="MakeupBrandName" Type="nchar" MaxLength="100" />
+    <Property Name="MakeupBrandName" Type="varchar" MaxLength="100" />
     <Property Name="MakeupBrandRating" Type="int" />
   </EntityType>
   <EntityType Name="Makeups">
@@ -22,7 +22,7 @@
       <PropertyRef Name="MakeupID" />
     </Key>
     <Property Name="MakeupID" Type="int" Nullable="false" />
-    <Property Name="MakeupName" Type="nchar" MaxLength="100" />
+    <Property Name="MakeupName" Type="varchar" MaxLength="100" />
     <Property Name="MakeupPrice" Type="int" />
     <Property Name="MakeupWeight" Type="int" />
     <Property Name="MakeupTypeID" Type="int" Nullable="false" />
@@ -33,7 +33,7 @@
       <PropertyRef Name="MakeupTypeID" />
     </Key>
     <Property Name="MakeupTypeID" Type="int" Nullable="false" />
-    <Property Name="MakeupTypeName" Type="nchar" MaxLength="100" />
+    <Property Name="MakeupTypeName" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="TransactionDetails">
     <Key>
@@ -50,19 +50,19 @@
     <Property Name="TransactionID" Type="int" Nullable="false" />
     <Property Name="UserID" Type="int" Nullable="false" />
     <Property Name="TransactionDate" Type="date" />
-    <Property Name="Status" Type="nchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
       <PropertyRef Name="UserID" />
     </Key>
     <Property Name="UserID" Type="int" Nullable="false" />
-    <Property Name="Username" Type="nchar" MaxLength="100" />
-    <Property Name="UserEmail" Type="nchar" MaxLength="150" />
+    <Property Name="Username" Type="varchar" MaxLength="100" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="150" />
     <Property Name="UserDOB" Type="date" />
-    <Property Name="UserGender" Type="nchar" MaxLength="10" />
-    <Property Name="UserRole" Type="nchar" MaxLength="10" />
-    <Property Name="UserPassword" Type="nchar" MaxLength="100" />
+    <Property Name="UserGender" Type="varchar" MaxLength="10" />
+    <Property Name="UserRole" Type="varchar" MaxLength="10" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="100" />
   </EntityType>
   <Association Name="FK_Carts_Makeups">
     <End Role="Makeups" Type="Self.Makeups" Multiplicity="1" />
