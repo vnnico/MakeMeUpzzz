@@ -8,18 +8,23 @@ namespace ProjectMakeMeUpzzz.Factory
     public class MakeUpFactories
     {
   
-            public static Makeup CreateMakeup(int id, string Name, int Price, int Weight, int TypeID, int BrandID) 
+            public static Makeup CreateMakeup(int MakeupID, string MakeupName, int MakeupPrice, int MakeupWeight, int MakeupTypeID, int MakeupBrandID) 
             {
             return new Makeup
             {
-                MakeupID = id,
-                MakeupName = Name,
-                MakeupWeight = Weight,
-                MakeupTypeID = TypeID,
-                MakeupBrandID = BrandID
+                MakeupID = MakeupID,
+                MakeupName = MakeupName,
+                MakeupWeight = MakeupWeight,
+                MakeupTypeID = MakeupTypeID,
+                MakeupBrandID = MakeupBrandID
             };
 
 
             }
+
+        internal static Makeup CreateMakeup(string makeupName, int makeupPrice, int makeupWeight, int makeupTypeID, int makeupBrandID)
+        {
+            throw new NotImplementedException();
         }
+    }
     }
