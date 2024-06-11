@@ -7,14 +7,16 @@ using ProjectMakeMeUpzzz.Models;
 namespace ProjectMakeMeUpzzz.Factory
 {
     public class MakeUpBrandFactories
+
+
     {
-        public static MakeupBrand CreateMakeUpBrand(int MakeupBrandID, string MakeupBrandName, int MakeupBrandRating)
+        public static MakeupBrand CreateMakeUpBrand(int makeupBrandID, string makeupBrandName, int makeupBrandRating)
         {
             return new MakeupBrand
             {
-                MakeupBrandID = MakeupBrandID,
-                MakeupBrandName = MakeupBrandName,
-                MakeupBrandRating = MakeupBrandRating
+                MakeupBrandID = makeupBrandID,
+                MakeupBrandName = makeupBrandName,
+                MakeupBrandRating = makeupBrandRating
             };
         }
     }

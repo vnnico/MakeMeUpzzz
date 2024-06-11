@@ -8,14 +8,14 @@ namespace ProjectMakeMeUpzzz.Factory
 {
     public class CartsFactories
     {
-        public static Cart CreateCart(int CardId, int UserId, int MakeupId, int Quantity)
+        public static Cart CreateCart(int cartId, int userId, int makeupId, int quantity)
         {
             return new Cart
             {
-                CartID = CardId,
-                UserID = UserId,
-                MakeupID = MakeupId,
-                Quantity = Quantity
+                CartID = cartId,
+                UserID = userId,
+                MakeupID = makeupId,
+                Quantity = quantity
             };
         }
     }

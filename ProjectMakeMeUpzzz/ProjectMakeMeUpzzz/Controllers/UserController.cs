@@ -13,6 +13,7 @@ namespace ProjectMakeMeUpzzz.Controllers
         public static Response<User> UpdateUserData(int userId, string userName, string userEmail, DateTime userDob, string userGender)
         {
             List<string> errors = new List<string>();
+           
             UserIdValidate(userId, errors);
             UsernameValidate(userName, errors);
             EmailValidate(userEmail, errors);
@@ -74,6 +75,7 @@ namespace ProjectMakeMeUpzzz.Controllers
         public static Response<User> Register(string username, string email, DateTime dob, string gender, string password, string confirmPassword)
         {
             List<string> errors = new List<string>();
+            String role = DefineRole(username, errors);
             UsernameValidate(username, errors);
             EmailValidate(email, errors);
             DOBValidate(dob, errors);
@@ -84,7 +86,7 @@ namespace ProjectMakeMeUpzzz.Controllers
             {
                 GenerateErrorResponse<User>(errors);
             }
-            return UserHandler.Register(username, email, dob, gender, password);
+            return UserHandler.Register(username, email, dob, gender,role, password);
         }
 
         private static Response<T> GenerateErrorResponse<T>(List<string> errors)
@@ -100,6 +102,17 @@ namespace ProjectMakeMeUpzzz.Controllers
                 IsSuccess = false,
                 Payload = default
             };
+        }
+
+        private static String DefineRole(String username, List<string> errors)
+        {
+            String role = "user";
+            if (username == "admin")
+            {
+                role = "admin";
+            }
+
+            return role;
         }
 
         private static void UserIdValidate(int userId, List<string> errors)
