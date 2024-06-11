@@ -9,6 +9,7 @@ namespace ProjectMakeMeUpzzz.Views
 {
     public partial class ManageMakeUp : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
