@@ -1,12 +1,153 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\nata\\source\\repos\\psd\\projectmakemeupzzz\\projectmakemeupzzz\\controllers\\makeupbrandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\controllers\\makeupbrandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\nata\\source\\repos\\psd\\projectmakemeupzzz\\projectmakemeupzzz\\controllers\\makeupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\controllers\\makeupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\nata\\source\\repos\\psd\\projectmakemeupzzz\\projectmakemeupzzz\\controllers\\makeuptypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\controllers\\makeuptypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\nata\\source\\repos\\psd\\projectmakemeupzzz\\projectmakemeupzzz\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\nata\\source\\repos\\psd\\projectmakemeupzzz\\projectmakemeupzzz\\controllers\\transactionheadercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\controllers\\transactionheadercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\nata\\source\\repos\\psd\\projectmakemeupzzz\\projectmakemeupzzz\\views\\insertmakeup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\insertmakeup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nata\\AppData\\Local\\Temp\\99acee06-da11-4c99-9a79-c6159cdd0429_FinPro-PSD.zip.429\\FinPro-PSD\\FinPro-PSD\\Views\\InsertMakeup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\projectmakemeupzzz\\views\\managemakeup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\managemakeup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAwCIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T04:04:48.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MakeupTypeController.cs",
+              "DocumentMoniker": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\MakeupTypeController.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Controllers\\MakeupTypeController.cs",
+              "ToolTip": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\MakeupTypeController.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Controllers\\MakeupTypeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T04:04:30.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MakeupController.cs",
+              "DocumentMoniker": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\MakeupController.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Controllers\\MakeupController.cs",
+              "ToolTip": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\MakeupController.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Controllers\\MakeupController.cs",
+              "ViewState": "AQIAAOYAAAAAAAAAAAAjwPwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T04:03:38.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MakeupBrandController.cs",
+              "DocumentMoniker": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\MakeupBrandController.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Controllers\\MakeupBrandController.cs",
+              "ToolTip": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\MakeupBrandController.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Controllers\\MakeupBrandController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T04:02:03.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TransactionHeaderController.cs",
+              "DocumentMoniker": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\TransactionHeaderController.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Controllers\\TransactionHeaderController.cs",
+              "ToolTip": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\TransactionHeaderController.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Controllers\\TransactionHeaderController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T04:05:02.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InsertMakeup.aspx",
+              "DocumentMoniker": "C:\\Users\\Nata\\AppData\\Local\\Temp\\99acee06-da11-4c99-9a79-c6159cdd0429_FinPro-PSD.zip.429\\FinPro-PSD\\FinPro-PSD\\Views\\InsertMakeup.aspx",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\99acee06-da11-4c99-9a79-c6159cdd0429_FinPro-PSD.zip.429\\FinPro-PSD\\FinPro-PSD\\Views\\InsertMakeup.aspx",
+              "ToolTip": "C:\\Users\\Nata\\AppData\\Local\\Temp\\99acee06-da11-4c99-9a79-c6159cdd0429_FinPro-PSD.zip.429\\FinPro-PSD\\FinPro-PSD\\Views\\InsertMakeup.aspx [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\99acee06-da11-4c99-9a79-c6159cdd0429_FinPro-PSD.zip.429\\FinPro-PSD\\FinPro-PSD\\Views\\InsertMakeup.aspx [Read Only]",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-10T14:42:11.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InsertMakeUp.aspx",
+              "DocumentMoniker": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\InsertMakeUp.aspx",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\InsertMakeUp.aspx",
+              "ToolTip": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\InsertMakeUp.aspx",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\InsertMakeUp.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-10T14:42:03.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ManageMakeUp.aspx",
+              "DocumentMoniker": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx",
+              "ToolTip": "C:\\Users\\Nata\\source\\repos\\PSD\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-10T14:40:41.523Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
