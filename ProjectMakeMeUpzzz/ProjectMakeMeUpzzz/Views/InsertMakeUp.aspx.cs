@@ -11,68 +11,61 @@ using ProjectMakeMeUpzzz.Models;
 namespace ProjectMakeMeUpzzz.Views
 {
     public partial class InsertMakeUp : System.Web.UI.Page
+        
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user"] != null)
+            if (!Page.IsPostBack)
             {
-                User user = (User)Session["user"];
-                if (user.UserRole != "admin")
+                Response<List<MakeupType>> response = MakeupTypeController.GetAllMakeupTypes();
+                if (response.IsSuccess)
                 {
-                    Response.Redirect("~/Views/Home.aspx");
+                    MakeUpTypeIdDdl.DataSource = response.Payload;
+                    MakeUpTypeIdDdl.DataValueField = "MakeupTypeID";
+                    MakeUpTypeIdDdl.DataTextField = "MakeupTypeName";
+                    MakeUpTypeIdDdl.DataBind();
                 }
-                if (!Page.IsPostBack)
+                Response<List<MakeupBrand>> response2 = MakeupBrandController.GetAllMakeupBrands();
+                if (response2.IsSuccess)
                 {
-                    Response<List<MakeupType>> response = MakeupTypeController.GetAllMakeupTypes();
-                    if (response.IsSuccess)
-                    {
-                        TypeIdDdl.DataSource = response.Payload;
-                        TypeIdDdl.DataValueField = "MakeupTypeID";
-                        TypeIdDdl.DataTextField = "MakeupTypeName";
-                        TypeIdDdl.DataBind();
-                    }
-                    Response<List<MakeupBrand>> response2 = MakeupBrandController.GetAllMakeupBrands();
-                    if (response2.IsSuccess)
-                    {
-                        BrandIdDdl.DataSource = response2.Payload;
-                        BrandIdDdl.DataValueField = "MakeupBrandID";
-                        BrandIdDdl.DataTextField = "MakeupBrandName";
-                        BrandIdDdl.DataBind();
-                    }
+                    MakeUpBrandIdDdl.DataSource = response2.Payload;
+                    MakeUpBrandIdDdl.DataValueField = "MakeupBrandID";
+                    MakeUpBrandIdDdl.DataTextField = "MakeupBrandName";
+                    MakeUpBrandIdDdl.DataBind();
                 }
-            }
-            else
-            {
-                Response.Redirect("~/Views/Home.aspx");
             }
         }
+    
 
     
 
         protected void InsertBtn_Click(object sender, EventArgs e)
         {
-            try
-            {
+           
+            
                 string name = NameTxt.Text;
                 string price = PriceTxt.Text;
                 string weight = WeightTxt.Text;
-                string typeid = TypeIdDdl.SelectedValue;
-                string brandid = BrandIdDdl.SelectedValue;
+                string typeid = MakeUpTypeIdDdl.SelectedValue;
+                string brandid = MakeUpBrandIdDdl.SelectedValue;
 
                 Response<Makeup> response = MakeupController.InsertMakeup(name, price, weight, typeid, brandid);
                 if (response.IsSuccess)
                 {
-                    Response.Redirect("~/Views/ManageMakeup.aspx");
+                    Response.Redirect("~/Views/ManageMakeUp.aspx");
                 }
 
-                ErrorLbl.Text = response.Message;
-                ErrorLbl.Visible = true;
-            }
-            catch (Exception error)
-            {
-                ErrorLbl.Text = error.Message;
-                ErrorLbl.Visible = true;
-            }
+                ErrorValidationLabel.Text = "Weight is Overcappacity";
+                ErrorValidationLabel.Visible = true;
+            
+             
+            
+        }
+
+        protected void BackBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/ManageMakeUp.aspx");
         }
     }
 }

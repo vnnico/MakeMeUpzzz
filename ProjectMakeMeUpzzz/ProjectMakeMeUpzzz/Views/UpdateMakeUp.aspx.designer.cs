@@ -11,7 +11,7 @@ namespace ProjectMakeMeUpzzz.Views
 {
 
 
-    public partial class InsertMakeUp
+    public partial class UpdateMakeUp
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace ProjectMakeMeUpzzz.Views
         protected global::System.Web.UI.WebControls.Label MNameLbl;
 
         /// <summary>
-        /// NameTxt control.
+        /// UNameTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NameTxt;
+        protected global::System.Web.UI.WebControls.TextBox UNameTxt;
 
         /// <summary>
         /// MPriceLbl control.
@@ -114,12 +114,12 @@ namespace ProjectMakeMeUpzzz.Views
         protected global::System.Web.UI.WebControls.Label ErrorValidationLabel;
 
         /// <summary>
-        /// InsertButton control.
+        /// UpdateButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button InsertButton;
+        protected global::System.Web.UI.WebControls.Button UpdateButton;
     }
 }

@@ -13,6 +13,90 @@ namespace ProjectMakeMeUpzzz.Handlers
     {
         public static object TransactionDetailFactory { get; private set; }
 
+
+
+        public static Response<List<TransactionHeader>> GetAllTransactionHeaders()
+        {
+            List<TransactionHeader> transactions = TransactionHeaderRepositories.GetAllTransactionHeaders();
+            if (transactions.Count > 0)
+            {
+                return new Response<List<TransactionHeader>>
+                {
+                    Message = "Success",
+                    IsSuccess = true,
+                    Payload = transactions
+                };
+            }
+            return new Response<List<TransactionHeader>>
+            {
+                Message = "No transaction found",
+                IsSuccess = false,
+                Payload = null
+            };
+        }
+
+        public static Response<TransactionHeader> GetTransactionHeaderById(int id)
+        {
+            TransactionHeader transaction = TransactionHeaderRepositories.GetTransactionHeaderById(id);
+            if (transaction != null)
+            {
+                return new Response<TransactionHeader>
+                {
+                    Message = "Success",
+                    IsSuccess = true,
+                    Payload = transaction
+                };
+            }
+            return new Response<TransactionHeader>
+            {
+                Message = "No transaction found",
+                IsSuccess = false,
+                Payload = null
+            };
+        }
+
+        public static Response<List<TransactionHeader>> GetTransactionHeaderByUserId(int id)
+        {
+            List<TransactionHeader> transactions = TransactionHeaderRepositories.GetTransactionHeaderByUserId(id);
+
+            if (transactions != null)
+            {
+                return new Response<List<TransactionHeader>>
+                {
+                    Message = "Success",
+                    IsSuccess = true,
+                    Payload = transactions
+                };
+            }
+            return new Response<List<TransactionHeader>>
+            {
+                Message = "Transaction not found",
+                IsSuccess = false,
+                Payload = null
+            };
+
+        }
+
+        public static Response<TransactionHeader> UpdateTransactionHeaderStatus(TransactionHeader transaction)
+        {
+            TransactionHeader tran = TransactionHeaderRepositories.UpdateTransactionHeaderStatus(transaction);
+            if (tran != null)
+            {
+                return new Response<TransactionHeader>
+                {
+                    Message = "Success",
+                    IsSuccess = true,
+                    Payload = tran
+                };
+            }
+            return new Response<TransactionHeader>
+            {
+                Message = "Transaction not found",
+                IsSuccess = false,
+                Payload = null
+            };
+        }
+
         public static Response<TransactionHeader> CheckoutCart(List<Cart> carts)
         {
             TransactionHeader transactionHeader = TransactionHeadersFactories.CreateTransactionHeader(GenerateTransactionID(), carts[0].UserID, DateTime.Now, "unhandled");

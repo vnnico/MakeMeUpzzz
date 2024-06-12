@@ -32,6 +32,26 @@ namespace ProjectMakeMeUpzzz.Handlers
             };
         }
 
+        public static Response<List<TransactionDetail>> GetTransactionDetailById(int id)
+        {
+            List<TransactionDetail> transactionDetail = TransactionDetailRepositories.GetTransactionDetailByTransactionId(id);
+            if (transactionDetail != null)
+            {
+                return new Response<List<TransactionDetail>>
+                {
+                    Message = "Success",
+                    IsSuccess = true,
+                    Payload = transactionDetail
+                };
+            }
+            return new Response<List<TransactionDetail>>
+            {
+                Message = "no transaction detail",
+                IsSuccess = false,
+                Payload = null
+            };
+        }
+
         public static Response<TransactionDetail> DeleteTransactionDetails(int transactionId)
         {
             if (TransactionDetailRepositories.DeleteTransactionDetails(transactionId) == 0)
@@ -62,7 +82,7 @@ namespace ProjectMakeMeUpzzz.Handlers
             return lastTransactionDetail.TransactionDetailID + 1;
         }
 
-        internal static Response<TransactionDetail> InsertTransactionDetail(int transactionID, int makeupID, object quantity)
+        internal static Response<TransactionDetail> InsertTransactionDetail(int transactionID, int makeupID, int? quantity)
         {
             throw new NotImplementedException();
         }

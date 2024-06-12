@@ -8,15 +8,13 @@ namespace ProjectMakeMeUpzzz.Factory
 {
     public class MakeUpTypeFactories
     {
-        public static MakeupType CreateMakeupType(int makeupTypeID,  string makeupTypeName)
+        public static MakeupType CreateMakeupType(int id,  string name)
         {
-
             return new MakeupType
             {
-                MakeupTypeID = makeupTypeID,
-                MakeupTypeName = makeupTypeName
+                MakeupTypeID = id,
+                MakeupTypeName = name
             };
-
         }
     }
 }
