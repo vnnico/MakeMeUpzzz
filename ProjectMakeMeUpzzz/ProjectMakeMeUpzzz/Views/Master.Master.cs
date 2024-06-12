@@ -90,5 +90,15 @@ namespace ProjectMakeMeUpzzz.Views
             Session.Remove("user");
             Response.Redirect("Login.aspx");
         }
+
+        protected void ButtonProfile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Profile.aspx/");
+        }
+
+        protected void ButtonProfileCustomer_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Profile.aspx/");
+        }
     }
 }
