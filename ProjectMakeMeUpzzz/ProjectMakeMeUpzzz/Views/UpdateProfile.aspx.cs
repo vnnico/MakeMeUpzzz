@@ -35,7 +35,13 @@ namespace ProjectMakeMeUpzzz.Views
                     user = (User)Session["user"];
                 }
 
-
+                if (user != null)
+                {
+                    TextBoxUsername.Text = user.Username.ToString();
+                    TextBoxEmail.Text = user.UserEmail.ToString();
+                    RadioButtonListGender.SelectedValue = user.UserGender.ToString();
+                    TextBoxDOB.Text = user.UserDOB.ToString();
+                }
             }
         }
 
@@ -48,8 +54,8 @@ namespace ProjectMakeMeUpzzz.Views
             string email = Convert.ToString(TextBoxEmail.Text);
             DateTime dob = DateTime.Parse(TextBoxDOB.Text);
             String gender = RadioButtonListGender.SelectedValue;
+                
 
-           
 
             Response<User> response = UserController.UpdateUserData(id, username, email, dob, gender);
             {
@@ -63,7 +69,7 @@ namespace ProjectMakeMeUpzzz.Views
                     errorlabel.Visible = true;
                     errorlabel.Text = response.Message;
                 }
-               
+
                 Response.Redirect("~/Views/Login.aspx");
 
 

@@ -17,7 +17,7 @@ namespace ProjectMakeMeUpzzz.Views
         {
             if (Session["user"] == null && Request.Cookies["user_auth"] == null)
             {
-                Response.Redirect("Login.aspx");
+                Response.Redirect("~/Views/Login.aspx");
             }
             else
             {
