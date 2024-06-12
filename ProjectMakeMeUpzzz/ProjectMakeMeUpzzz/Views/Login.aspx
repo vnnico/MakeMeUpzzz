@@ -21,9 +21,10 @@
                 <asp:TextBox ID="TextBoxPassword" runat="server" TextMode="Password"></asp:TextBox>
             </div>
 
-            <asp:CheckBox ID="CheckBox" runat="server" />
+            Remember me<asp:CheckBox ID="CheckBox" runat="server" />
 
             <asp:Label ID="LabelError" runat="server" Text=""></asp:Label>
+            <br />
             <asp:Button ID="ButtonLogin" runat="server" Text="Login" OnClick="ButtonLogin_Click" />
 
             <div>

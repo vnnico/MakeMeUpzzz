@@ -3,7 +3,7 @@
 
     <h1>Manage Makeup</h1>
     <div>    
-        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">LinkButton</asp:LinkButton>
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Insert a Make Up</asp:LinkButton>
 </div>
     <div>
 
@@ -19,6 +19,23 @@
            
         </Columns>
     </asp:GridView>
+        <br />
+        <div>
+            <h1>
+                Make Up Brand
+            </h1>
+            <div>
+                <asp:LinkButton ID="InsertMBrandLink" runat="server" OnClick="InsertMBrandLink_Click">Insert a Make Up Brand</asp:LinkButton>
+            </div>
+        </div>
+        <asp:GridView ID="BrandGV" runat="server" AutoGenerateColumns="False" OnRowDeleting="BrandGV_RowDeleting" OnRowEditing="BrandGV_RowEditing" OnSelectedIndexChanged="BrandGV_SelectedIndexChanged">
+            <Columns>
+                <asp:BoundField DataField="MakeUpBrandId" HeaderText="Make Up Brand ID" SortExpression="MakeUpBrandId" />
+                <asp:BoundField DataField="MakeUpBrandName" HeaderText="Make Up Brand Name" SortExpression="MakeUpBrandName" />
+                <asp:BoundField DataField="MakeUpBrandRating" HeaderText="Make Up Brand Rating" SortExpression="MakeUpBrandRating" />
+                <asp:CommandField ButtonType="Button" HeaderText="Action" ShowCancelButton="False" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
+            </Columns>
+        </asp:GridView>
  
         <br/>
         </div>
