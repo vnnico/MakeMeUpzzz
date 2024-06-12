@@ -14,16 +14,13 @@ namespace ProjectMakeMeUpzzz.Factory
             {
                 UserID = userId,
                 Username = username,
-                UserEmail = userEmail,
-                UserDOB = userDOB,
-                UserGender = userGender,
-                UserRole = userRole,
+                UserEmail = email,
+                UserDOB = dob,
+                UserGender = gender,
+                UserRole = "customer",
+                UserPassword = password
             };
         }
 
-        internal static User CreateUser(int v, string username, string email, DateTime dob, string gender, string password)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
