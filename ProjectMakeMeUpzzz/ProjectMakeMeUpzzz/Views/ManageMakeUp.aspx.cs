@@ -21,8 +21,9 @@ namespace ProjectMakeMeUpzzz.Views
             InsertGrid.DataSource = makeups;
             InsertGrid.DataBind();
 
-
-
+            List<MakeupBrand> makeupbrands = (from makeupbrand in db.MakeupBrands select makeupbrand).ToList();
+            BrandGV.DataSource = makeupbrands;
+            BrandGV.DataBind();
         }
 
 
