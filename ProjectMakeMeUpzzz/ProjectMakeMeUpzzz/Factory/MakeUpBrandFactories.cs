@@ -8,13 +8,13 @@ namespace ProjectMakeMeUpzzz.Factory
 {
     public class MakeUpBrandFactories
     {
-        public static MakeupBrand CreateMakeUpBrand(int MakeupBrandID, string MakeupBrandName, int MakeupBrandRating)
+        public static MakeupBrand CreateMakeUpBrand(int id, string name, int rating)
         {
             return new MakeupBrand
             {
-                MakeupBrandID = MakeupBrandID,
-                MakeupBrandName = MakeupBrandName,
-                MakeupBrandRating = MakeupBrandRating
+                MakeupBrandID = id,
+                MakeupBrandName = name,
+                MakeupBrandRating = rating
             };
         }
     }

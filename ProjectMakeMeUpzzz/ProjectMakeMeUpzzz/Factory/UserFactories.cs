@@ -8,11 +8,11 @@ namespace ProjectMakeMeUpzzz.Factory
 {
     public class UserFactories
     {
-        public static User CreateUser(int userId, string username, string userEmail, DateTime userDOB, string userGender, string userRole, string userPassword)
+        public static User CreateCustomer(int id, string username, string email, DateTime dob, string gender, string password)
         {
             return new User
             {
-                UserID = userId,
+                UserID = id,
                 Username = username,
                 UserEmail = email,
                 UserDOB = dob,

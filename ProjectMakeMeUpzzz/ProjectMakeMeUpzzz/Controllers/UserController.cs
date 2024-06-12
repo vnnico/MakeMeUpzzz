@@ -82,7 +82,7 @@ namespace ProjectMakeMeUpzzz.Controllers
             ConfirmPasswordValidate(password, confirmPassword, errors);
             if (errors.Count > 0)
             {
-                GenerateErrorResponse<User>(errors);
+                return GenerateErrorResponse<User>(errors);
             }
             return UserHandler.Register(username, email, dob, gender, password);
         }

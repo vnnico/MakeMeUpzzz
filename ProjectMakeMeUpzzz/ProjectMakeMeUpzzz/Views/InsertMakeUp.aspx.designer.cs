@@ -15,15 +15,6 @@ namespace ProjectMakeMeUpzzz.Views
     {
 
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// MNameLbl control.
         /// </summary>
         /// <remarks>
@@ -87,13 +78,13 @@ namespace ProjectMakeMeUpzzz.Views
         protected global::System.Web.UI.WebControls.Label MTypeIDLbl;
 
         /// <summary>
-        /// TypeIdDdl control.
+        /// MakeUpTypeIdDdl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TypeIdDdl;
+        protected global::System.Web.UI.WebControls.DropDownList MakeUpTypeIdDdl;
 
         /// <summary>
         /// MBrandIDLbl control.
@@ -105,22 +96,22 @@ namespace ProjectMakeMeUpzzz.Views
         protected global::System.Web.UI.WebControls.Label MBrandIDLbl;
 
         /// <summary>
-        /// BrandIdDdl control.
+        /// MakeUpBrandIdDdl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList BrandIdDdl;
+        protected global::System.Web.UI.WebControls.DropDownList MakeUpBrandIdDdl;
 
         /// <summary>
-        /// ErrorLbl control.
+        /// ErrorValidationLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorLbl;
+        protected global::System.Web.UI.WebControls.Label ErrorValidationLabel;
 
         /// <summary>
         /// InsertButton control.

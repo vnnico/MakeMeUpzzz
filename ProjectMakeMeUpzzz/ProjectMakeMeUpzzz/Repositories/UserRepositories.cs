@@ -10,6 +10,7 @@ namespace ProjectMakeMeUpzzz.Repositories
     {
         private static readonly DatabaseEntities1 db = new DatabaseEntities1();
 
+
         public static User GetLastUser()
         {
             return db.Users.ToList().LastOrDefault();

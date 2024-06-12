@@ -11,7 +11,7 @@ namespace ProjectMakeMeUpzzz.Controllers
 {
     public class MakeupBrandController
     {
-        
+
         public static Response<MakeupBrand> GetMakeupBrandById(int id)
         {
             return MakeupBrandHandler.GetMakeupBrandById(id);
@@ -198,6 +198,7 @@ namespace ProjectMakeMeUpzzz.Controllers
 
             }
         }
+
 
     }
 }

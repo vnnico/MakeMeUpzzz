@@ -46,6 +46,22 @@ namespace ProjectMakeMeUpzzz.Repositories
             return transactionHeader;
         }
 
+        public static TransactionHeader UpdateTransactionHeaderStatus(TransactionHeader transaction)
+        {
+            TransactionHeader updatedTransactionHeader = db.TransactionHeaders.Find(transaction.TransactionID);
+            if (updatedTransactionHeader.Status == "unhandled")
+            {
+                updatedTransactionHeader.Status = "handled";
+            }
+            else
+            {
+                updatedTransactionHeader.Status = "unhandled";
+            }
+            db.SaveChanges();
+            return transaction;
+
+        }
+
         public static int DeleteTransactionHeader(int id)
         {
             TransactionHeader deletedTransactionHeader = db.TransactionHeaders.Find(id);

@@ -138,7 +138,7 @@ namespace ProjectMakeMeUpzzz.Handlers
                 };
             }
 
-            User user = UserFactories.CreateUser(GenerateID(), username, email, dob, gender, password);
+            User user = UserFactories.CreateCustomer(GenerateID(), username, email, dob, gender, password);
 
             if (UserRepositories.InsertUser(user) == 0)
             {
