@@ -14,6 +14,7 @@
         <asp:Label ID="InsertMBrandErrorLbl" runat="server" Text="Error Label" Visible="false" CssClass="error"></asp:Label>
     </div>
     <div>
+        <asp:Button ID="BacktoManageMakeUpBtn" runat="server" Text="Back" OnClick="BacktoManageMakeUpBtn_Click" />
         <asp:Button ID="InsertMBrandBtn" runat="server" Text="Insert" OnClick="InsertMBrandBtn_Click" />
     </div>
 </asp:Content>

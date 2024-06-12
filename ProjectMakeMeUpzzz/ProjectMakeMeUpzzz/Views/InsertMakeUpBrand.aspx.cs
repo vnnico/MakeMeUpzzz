@@ -53,5 +53,10 @@ namespace ProjectMakeMeUpzzz.Views
                 InsertMBrandErrorLbl.Visible = true;
             }
         }
+
+        protected void BacktoManageMakeUpBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/ManageMakeup.aspx");
+        }
     }
 }

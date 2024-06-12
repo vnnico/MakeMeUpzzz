@@ -11,53 +11,62 @@ namespace ProjectMakeMeUpzzz.Views
 {
 
 
-    public partial class InsertMakeUpBrand
+    public partial class UpdateMakeUpBrand
     {
 
         /// <summary>
-        /// InsertMBrandNameLbl control.
+        /// CurrentMBrandIDLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label InsertMBrandNameLbl;
+        protected global::System.Web.UI.WebControls.Label CurrentMBrandIDLbl;
 
         /// <summary>
-        /// InsertMBrandNameTB control.
+        /// UpdateMBrandNameLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox InsertMBrandNameTB;
+        protected global::System.Web.UI.WebControls.Label UpdateMBrandNameLbl;
 
         /// <summary>
-        /// InsertMBrandRatingLbl control.
+        /// UpdateMBrandNameTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label InsertMBrandRatingLbl;
+        protected global::System.Web.UI.WebControls.TextBox UpdateMBrandNameTB;
 
         /// <summary>
-        /// InsertMBrandRatingTB control.
+        /// UpdateMBrandRatingLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox InsertMBrandRatingTB;
+        protected global::System.Web.UI.WebControls.Label UpdateMBrandRatingLbl;
 
         /// <summary>
-        /// InsertMBrandErrorLbl control.
+        /// UpdateMBrandRatingTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label InsertMBrandErrorLbl;
+        protected global::System.Web.UI.WebControls.TextBox UpdateMBrandRatingTB;
+
+        /// <summary>
+        /// UpdateMBrandErrorLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UpdateMBrandErrorLbl;
 
         /// <summary>
         /// BacktoManageMakeUpBtn control.
@@ -69,12 +78,12 @@ namespace ProjectMakeMeUpzzz.Views
         protected global::System.Web.UI.WebControls.Button BacktoManageMakeUpBtn;
 
         /// <summary>
-        /// InsertMBrandBtn control.
+        /// UpdateMBrandBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button InsertMBrandBtn;
+        protected global::System.Web.UI.WebControls.Button UpdateMBrandBtn;
     }
 }
