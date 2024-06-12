@@ -15,12 +15,12 @@ namespace ProjectMakeMeUpzzz.Views
     {
 
         /// <summary>
-        /// GridViewManageMakeUp control.
+        /// GridType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewManageMakeUp;
+        protected global::System.Web.UI.WebControls.GridView GridType;
     }
 }

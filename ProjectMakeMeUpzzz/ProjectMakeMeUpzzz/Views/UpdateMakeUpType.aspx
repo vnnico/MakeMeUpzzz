@@ -3,6 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentBody" runat="server">
     <h1>Update Makeup Type</h1>
     <div>
+        <div>
+        <asp:Button ID="gobackBtn" runat="server" Text="Back" OnClick="gobackBtn_Click" />
+        </div>
+
         <asp:Label ID="lbl_MakeUpTypeID" runat="server" Text="ID"></asp:Label>
         <asp:TextBox ID="txt_MakeUpTypeID" runat="server" ReadOnly="true"></asp:TextBox>
     </div>

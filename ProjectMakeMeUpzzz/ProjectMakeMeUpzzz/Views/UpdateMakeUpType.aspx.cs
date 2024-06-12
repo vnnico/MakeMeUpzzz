@@ -14,48 +14,76 @@ namespace ProjectMakeMeUpzzz.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //{
-            //    User user = (User)Session["user"];
-            //    if (user.UserRole != "admin")
-            //    {
-            //        Response.Redirect("~/Views/Home.aspx");
-            //    }
-            //    if (!Page.IsPostBack)
-            //    {
-                    Response<MakeupType> response = MakeupTypeController.GetMakeupTypeById(Convert.ToInt32(Request.QueryString["Id"]));
+            if (Session["user"] != null)
+            {
+                User user = (User)Session["user"];
+                if (user.UserRole != "admin")
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+            if (!Page.IsPostBack)
+            {
+                if (int.TryParse(Request.QueryString["id"], out int id))
+                {
+                    Response<MakeupType> response = MakeupTypeController.GetMakeupTypeById(id);
+
                     if (response.IsSuccess)
                     {
                         MakeupType makeupType = response.Payload;
-                        txt_MakeUpTypeID.Text = makeupType.MakeupTypeID.ToString();
-                        txt_MakeUpTypeName.Text = makeupType.MakeupTypeName;
+                        if (makeupType != null)
+                        {
+                            txt_MakeUpTypeID.Text = makeupType.MakeupTypeID.ToString();
+                            txt_MakeUpTypeName.Text = makeupType.MakeupTypeName;
+
+                        }
                     }
                     else
                     {
-                        Response.Write(response.Message);
+                        lbl_Error.Text = response.Message;
+                        lbl_Error.Visible = true;
                     }
-            //    }
-            //}
-            //else
-            //{
-            //    Response.Redirect("~/Views/Home.aspx");
-            //}
+                }
+                else
+                {
+                    lbl_Error.Text = "Invalid ID";
+                    lbl_Error.Visible = true;
+                }
+            }
+
         }
 
         protected void UpdateMakeUpTypeBtn_Click(object sender, EventArgs e)
         {
-            string id = txt_MakeUpTypeID.Text;
-            string name = txt_MakeUpTypeName.Text;
+            try
+            {
+                String id = Request.QueryString["Id"];
+                String name = txt_MakeUpTypeName.Text.ToString();
 
-            Response<MakeupType> response = MakeupTypeController.UpdateMakeupType(id, name);
+                Response<MakeupType> response = MakeupTypeController.UpdateMakeupType(id, name);
 
-            // sengaja komen dulu soalnya ga bisa save database nya
-            //if (response.IsSuccess)
-            //{
-            //    Response.Redirect("~/Views/ManageMakeUp.aspx");
-            //}
-            lbl_Error.Text = response.Message;
-            lbl_Error.Visible = true;
+
+                if (response.IsSuccess)
+                {
+                    Response.Redirect("~/Views/ManageMakeUp.aspx");
+                }
+                lbl_Error.Text = response.Message;
+                lbl_Error.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                lbl_Error.Text = ex.Message;
+                lbl_Error.Visible = true;
+            }
         }
 
+        protected void gobackBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/ManageMakeUp.aspx");
+        }
     }
 }
