@@ -21,12 +21,12 @@ namespace ProjectMakeMeUpzzz.Views
                 User user = (User)Session["user"];
                 if (user.UserRole != "admin")
                 {
-                    Response.Redirect("~/Views/Home.aspx");
+                    //Response.Redirect("~/Views/Home.aspx");
                 }
             }
             else
             {
-                Response.Redirect("~/Views/Home.aspx");
+                //Response.Redirect("~/Views/Home.aspx");
             }
         }
 
@@ -52,6 +52,11 @@ namespace ProjectMakeMeUpzzz.Views
                 InsertMBrandErrorLbl.Text = error.Message;
                 InsertMBrandErrorLbl.Visible = true;
             }
+        }
+
+        protected void BacktoManageMakeUpBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/ManageMakeup.aspx");
         }
     }
 }
