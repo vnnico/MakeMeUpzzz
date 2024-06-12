@@ -44,7 +44,7 @@ namespace ProjectMakeMeUpzzz.Views
 
             if (Session["user"] == null && Request.Cookies["user_auth"] == null)
             {
-                Response.Redirect("Login.aspx");
+                Response.Redirect("~/Views/Login.aspx");
             }
             else
             {
@@ -71,12 +71,12 @@ namespace ProjectMakeMeUpzzz.Views
 
         protected void ButtonHome_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Home.aspx");
+            Response.Redirect("~/Views/Home.aspx");
         }
 
         protected void ButtonManageMakeUp_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ManageMakeUp.aspx");
+            Response.Redirect("~/Views/ManageMakeUp.aspx");
         }
 
         protected void ButtonLogOut_Click(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace ProjectMakeMeUpzzz.Views
             }
 
             Session.Remove("user");
-            Response.Redirect("Login.aspx");
+            Response.Redirect("~/Views/Login.aspx");
         }
     }
 }

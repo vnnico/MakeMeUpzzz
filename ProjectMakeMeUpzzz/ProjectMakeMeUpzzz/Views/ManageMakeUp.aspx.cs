@@ -66,5 +66,41 @@ namespace ProjectMakeMeUpzzz.Views
         {
             Response.Redirect("~/Views/InsertMakeUp.aspx/");
         }
+
+        protected void InsertMBrandLink_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/InsertMakeUpBrand.aspx/");
+        }
+
+        protected void BrandGV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BrandGV_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            GridViewRow row = BrandGV.Rows[e.RowIndex];
+            String id = row.Cells[0].Text.ToString();
+
+            Response<MakeupBrand> response = MakeupBrandController.RemoveMakeupBrandById(id);
+            if (response.IsSuccess)
+            {
+                Response<List<MakeupBrand>> responses = MakeupBrandController.GetAllMakeupBrands();
+                if (responses.IsSuccess)
+                {
+                    BrandGV.DataSource = responses.Payload;
+                    BrandGV.DataBind();
+                }
+
+            }
+        }
+
+        protected void BrandGV_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+
+            GridViewRow row = BrandGV.Rows[e.NewEditIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/Views/UpdateMakeUpBrand.aspx/?ID=" + id);
+        }
     }
 }

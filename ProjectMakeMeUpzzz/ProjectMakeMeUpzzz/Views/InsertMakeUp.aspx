@@ -26,6 +26,7 @@
         <asp:Label ID="ErrorValidationLabel" runat="server" Text=""></asp:Label>
     </div>
 <div>
+    <asp:Button ID="backButton" runat="server" Text="Back" OnClick="backButton_Click" />
     <asp:Button ID="InsertButton" runat="server" Text="Insert" OnClick="InsertBtn_Click" />
 </div>
 

@@ -19,12 +19,12 @@ namespace ProjectMakeMeUpzzz.Views
                 User user = (User)Session["user"];
                 if (user.UserRole != "admin")
                 {
-                    //Response.Redirect("~/Views/Home.aspx");
+                    Response.Redirect("~/Views/Home.aspx");
                 }
             }
             else
             {
-                //Response.Redirect("~/Views/Home.aspx");
+                Response.Redirect("~/Views/Home.aspx");
             }
 
             if (!Page.IsPostBack)
@@ -67,7 +67,7 @@ namespace ProjectMakeMeUpzzz.Views
 
                 if (response.IsSuccess == true)
                 {
-                    //Response.Redirect("~/Views/ManageMakeup.aspx");
+                    Response.Redirect("~/Views/ManageMakeup.aspx");
                 }
 
                 UpdateMBrandErrorLbl.Text = response.Message;

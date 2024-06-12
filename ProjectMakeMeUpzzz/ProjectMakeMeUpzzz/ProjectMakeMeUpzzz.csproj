@@ -91,9 +91,12 @@
     </Content>
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\InsertMakeUp.aspx" />
+    <Content Include="Views\InsertMakeUpBrand.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\ManageMakeUp.aspx" />
+    <Content Include="Views\Register.aspx" />
     <Content Include="Views\UpdateMakeUp.aspx" />
+    <Content Include="Views\UpdateMakeUpBrand.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -172,13 +175,19 @@
     <Compile Include="Views\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-
     <Compile Include="Views\InsertMakeUp.aspx.cs">
       <DependentUpon>InsertMakeUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\InsertMakeUp.aspx.designer.cs">
       <DependentUpon>InsertMakeUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InsertMakeUpBrand.aspx.cs">
+      <DependentUpon>InsertMakeUpBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\InsertMakeUpBrand.aspx.designer.cs">
+      <DependentUpon>InsertMakeUpBrand.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -187,7 +196,6 @@
     <Compile Include="Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-
     <Compile Include="Views\ManageMakeUp.aspx.cs">
       <DependentUpon>ManageMakeUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -209,12 +217,26 @@
     <Compile Include="Views\InsertMakeUp.aspx.designer.cs">
       <DependentUpon>InsertMakeUp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\UpdateMakeUp.aspx.cs">
       <DependentUpon>UpdateMakeUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\UpdateMakeUp.aspx.designer.cs">
       <DependentUpon>UpdateMakeUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateMakeUpBrand.aspx.cs">
+      <DependentUpon>UpdateMakeUpBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateMakeUpBrand.aspx.designer.cs">
+      <DependentUpon>UpdateMakeUpBrand.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
