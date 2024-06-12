@@ -34,8 +34,8 @@ namespace ProjectMakeMeUpzzz.Controllers
             }
             return MakeupBrandHandler.InsertMakeupBrand(name, Convert.ToInt32(rating));
         }
-        public static Response<MakeupBrand> RemoveMakeupBrandById(string id)
-        {
+        public static Response<MakeupBrand> RemoveMakeupBrandById(string id) {
+        
             List<string> errors = new List<string>();
             IdValidate(id, errors);
             if (errors.Count > 0)
