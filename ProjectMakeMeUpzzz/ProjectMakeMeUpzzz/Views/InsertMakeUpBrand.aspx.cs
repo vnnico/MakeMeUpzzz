@@ -21,12 +21,12 @@ namespace ProjectMakeMeUpzzz.Views
                 User user = (User)Session["user"];
                 if (user.UserRole != "admin")
                 {
-                    //Response.Redirect("~/Views/Home.aspx");
+                    Response.Redirect("~/Views/Home.aspx");
                 }
             }
             else
             {
-                //Response.Redirect("~/Views/Home.aspx");
+                Response.Redirect("~/Views/Home.aspx");
             }
         }
 
