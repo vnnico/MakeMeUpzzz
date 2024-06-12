@@ -92,8 +92,10 @@
     <Content Include="Views\buatest.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\InsertMakeUp.aspx" />
+    <Content Include="Views\InsertMakeUpType.aspx" />
     <Content Include="Views\ManageMakeUp.aspx" />
     <Content Include="Views\Register.aspx" />
+    <Content Include="Views\UpdateMakeUpType.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +185,13 @@
     <Compile Include="Views\InsertMakeUp.aspx.designer.cs">
       <DependentUpon>InsertMakeUp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\InsertMakeUpType.aspx.cs">
+      <DependentUpon>InsertMakeUpType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\InsertMakeUpType.aspx.designer.cs">
+      <DependentUpon>InsertMakeUpType.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\ManageMakeUp.aspx.cs">
       <DependentUpon>ManageMakeUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,6 +212,13 @@
     </Compile>
     <Compile Include="Views\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateMakeUpType.aspx.cs">
+      <DependentUpon>UpdateMakeUpType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateMakeUpType.aspx.designer.cs">
+      <DependentUpon>UpdateMakeUpType.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
