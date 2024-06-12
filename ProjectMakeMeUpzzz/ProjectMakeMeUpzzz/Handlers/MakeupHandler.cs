@@ -62,9 +62,9 @@ namespace ProjectMakeMeUpzzz.Handlers
                 Payload = null
             };
         }
-        public static Response<Makeup> InsertMakeup(int MakeupID, string MakeupName, int MakeupPrice, int MakeupWeight, int MakeupTypeID, int MakeupBrandID)
+        public static Response<Makeup> InsertMakeup(string name, int price, int weight, int typeid, int brandid)
         {
-            Makeup makeup = MakeUpFactories.CreateMakeup(GenerateIDMakeup(), MakeupName, MakeupPrice, MakeupWeight, MakeupTypeID, MakeupBrandID);
+            Makeup makeup = MakeUpFactories.CreateMakeup(GenerateIDMakeup(), name, price, weight, typeid, brandid);
 
             if (MakeUpRepositories.InsertMakeup(makeup) == 0)
             {
@@ -84,9 +84,9 @@ namespace ProjectMakeMeUpzzz.Handlers
             };
         }
 
-        public static Response<Makeup> UpdateMakeup(int MakeupID, string MakeupName, int MakeupPrice, int MakeupWeight, int MakeupTypeID, int MakeupBrandID)
+        public static Response<Makeup> UpdateMakeup(int id, string name, int price, int weight, int typeid, int brandid)
         {
-            Makeup makeup = MakeUpFactories.CreateMakeup(MakeupName, MakeupPrice, MakeupWeight, MakeupTypeID, MakeupBrandID);
+            Makeup makeup = MakeUpFactories.CreateMakeup(id, name, price, weight, typeid, brandid);
             Makeup updatedMakeup = MakeUpRepositories.UpdateMakeup(makeup);
 
             if (updatedMakeup == null)
@@ -142,9 +142,6 @@ namespace ProjectMakeMeUpzzz.Handlers
             }
         }
 
-        internal static Response<Makeup> InsertMakeup(string name, int v1, int v2, int v3, int v4)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

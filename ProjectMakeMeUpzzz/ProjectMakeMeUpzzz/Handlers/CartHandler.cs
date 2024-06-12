@@ -48,9 +48,9 @@ namespace ProjectMakeMeUpzzz.Handlers
             };
         }
 
-        public static Response<Cart> InsertCart(int userId, int makeupId, int quantity)
+        public static Response<Cart> InsertCart(int UserId, int MakeupId, int Quantity)
         {
-            Cart cart = CartsFactories.CreateCart(GenerateId(), userId, makeupId, quantity);
+            Cart cart = CartsFactories.CreateCart(GenerateId(), UserId, MakeupId, Quantity);
             if (CartRepositories.InsertCart(cart) == 0)
             {
                 return new Response<Cart>
@@ -67,9 +67,9 @@ namespace ProjectMakeMeUpzzz.Handlers
                 Payload = cart
             };
         }
-        public static Response<Cart> GetCartById(int id)
+        public static Response<Cart> GetCartById(int CardId)
         {
-            Cart cart = CartRepositories.GetCartById(id);
+            Cart cart = CartRepositories.GetCartById(CardId);
             if (cart == null)
             {
                 return new Response<Cart>
@@ -87,9 +87,9 @@ namespace ProjectMakeMeUpzzz.Handlers
             };
         }
 
-        public static Response<List<Cart>> GetCartByUserId(int userId)
+        public static Response<List<Cart>> GetCartByUserId(int UserId)
         {
-            List<Cart> carts = CartRepositories.GetCartByUserId(userId);
+            List<Cart> carts = CartRepositories.GetCartByUserId(UserId);
             if (carts.Count == 0)
             {
                 return new Response<List<Cart>>

@@ -89,12 +89,11 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <Content Include="Views\buatest.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\InsertMakeUp.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\ManageMakeUp.aspx" />
-    <Content Include="Views\Register.aspx" />
+    <Content Include="Views\UpdateMakeUp.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +101,7 @@
     <Compile Include="Controllers\MakeupBrandController.cs" />
     <Compile Include="Controllers\MakeupController.cs" />
     <Compile Include="Controllers\MakeupTypeController.cs" />
+    <Compile Include="Controllers\TransactionDetailController.cs" />
     <Compile Include="Controllers\TransactionHeaderController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Factory\CartsFactories.cs" />
@@ -116,6 +116,7 @@
     <Compile Include="Handlers\MakeupHandler.cs" />
     <Compile Include="Handlers\MakeupTypeHandler.cs" />
     <Compile Include="Handlers\TransactionDetailHandler.cs" />
+    <Compile Include="Handlers\TransactionHandler.cs" />
     <Compile Include="Handlers\TransactionHeaderHandler.cs" />
     <Compile Include="Handlers\UserHandler.cs" />
     <Compile Include="Helpers\Response.cs" />
@@ -162,14 +163,8 @@
     <Compile Include="Repositories\MakeUpTypeRepositories.cs" />
     <Compile Include="Repositories\TransactionDetailRepositories.cs" />
     <Compile Include="Repositories\TransactionHeaderRepositories.cs" />
+    <Compile Include="Repositories\TransactionRepositories.cs" />
     <Compile Include="Repositories\UserRepositories.cs" />
-    <Compile Include="Views\buatest.aspx.cs">
-      <DependentUpon>buatest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\buatest.aspx.designer.cs">
-      <DependentUpon>buatest.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -177,6 +172,7 @@
     <Compile Include="Views\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Views\InsertMakeUp.aspx.cs">
       <DependentUpon>InsertMakeUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -191,6 +187,7 @@
     <Compile Include="Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Views\ManageMakeUp.aspx.cs">
       <DependentUpon>ManageMakeUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -205,12 +202,19 @@
     <Compile Include="Views\Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
-    <Compile Include="Views\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="Views\InsertMakeUp.aspx.cs">
+      <DependentUpon>InsertMakeUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="Views\InsertMakeUp.aspx.designer.cs">
+      <DependentUpon>InsertMakeUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateMakeUp.aspx.cs">
+      <DependentUpon>UpdateMakeUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateMakeUp.aspx.designer.cs">
+      <DependentUpon>UpdateMakeUp.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
