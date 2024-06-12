@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <h1>Register</h1>
             <div>
                 <asp:Label ID="LabelUsername" runat="server" Text="Username"></asp:Label>
                 <asp:TextBox ID="TextBoxUsername" runat="server"></asp:TextBox>
@@ -42,13 +43,18 @@
                 <asp:TextBox ID="TextBoxConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
             </div>        
 
-            <asp:Label ID="LabelError" runat="server" Text="Error Label"></asp:Label>
+            <asp:Label ID="LabelError" runat="server" Text=""></asp:Label>
 
             <div>
 
             <asp:Button ID="ButtonRegister" runat="server" Text="Sign Up" OnClick="ButtonRegister_Click" />
             </div>
 
+            <div>
+                <asp:Label ID="LabelRedirect" runat="server" Text="Already have an account?"></asp:Label>
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Login</asp:LinkButton>
+            </div>
+           
         </div>
     </form>
 </body>

@@ -15,6 +15,13 @@ namespace ProjectMakeMeUpzzz.Views
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Session["user"] != null || Request.Cookies["user_auth"] != null)
+            {
+
+                Response.Redirect("~/Views/Home.aspx");
+
+            }
+
         }
 
         protected void ButtonRegister_Click(object sender, EventArgs e)
@@ -38,6 +45,11 @@ namespace ProjectMakeMeUpzzz.Views
             LabelError.Text = response.Message;
             //LabelError.Visible = true;
 
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }

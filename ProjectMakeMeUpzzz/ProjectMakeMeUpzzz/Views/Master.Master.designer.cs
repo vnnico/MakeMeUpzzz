@@ -24,6 +24,15 @@ namespace ProjectMakeMeUpzzz.Views
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// ButtonHome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonHome;
+
+        /// <summary>
         /// ButtonManageMakeUp control.
         /// </summary>
         /// <remarks>
@@ -33,13 +42,76 @@ namespace ProjectMakeMeUpzzz.Views
         protected global::System.Web.UI.WebControls.Button ButtonManageMakeUp;
 
         /// <summary>
-        /// ButtonHome control.
+        /// ButtonOrderQueue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonHome;
+        protected global::System.Web.UI.WebControls.Button ButtonOrderQueue;
+
+        /// <summary>
+        /// ButtonProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonProfile;
+
+        /// <summary>
+        /// ButtonTransactionReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonTransactionReport;
+
+        /// <summary>
+        /// ButtonLogOut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonLogOut;
+
+        /// <summary>
+        /// ButtonOrderMakeUp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonOrderMakeUp;
+
+        /// <summary>
+        /// ButtonHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonHistory;
+
+        /// <summary>
+        /// ButtonProfileCustomer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonProfileCustomer;
+
+        /// <summary>
+        /// ButtonLogOutCustomer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonLogOutCustomer;
 
         /// <summary>
         /// ContentBody control.

@@ -15,12 +15,12 @@ namespace ProjectMakeMeUpzzz.Views
     {
 
         /// <summary>
-        /// ManageMakeUpBtn control.
+        /// GridViewCustomer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ManageMakeUpBtn;
+        protected global::System.Web.UI.WebControls.GridView GridViewCustomer;
     }
 }

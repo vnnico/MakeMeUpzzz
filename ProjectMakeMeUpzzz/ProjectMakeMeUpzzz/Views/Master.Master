@@ -5,14 +5,38 @@
 <html>
 <head runat="server">
     <title>MakeMeUpzz</title>
- 
+
 </head>
 <body>
     <form id="form1" runat="server">
+
+        <% if (user != null && user.UserRole.Equals("admin", StringComparison.OrdinalIgnoreCase))
+            { %>
         <nav>
-            <asp:Button ID="ButtonManageMakeUp" runat="server" Text="Manage Make Up" OnClick="ButtonManageMakeUp_Click" />
             <asp:Button ID="ButtonHome" runat="server" Text="Home" OnClick="ButtonHome_Click" />
+            <asp:Button ID="ButtonManageMakeUp" runat="server" Text="Manage Make Up" OnClick="ButtonManageMakeUp_Click" />
+            <asp:Button ID="ButtonOrderQueue" runat="server" Text="Order Queue" />
+            <asp:Button ID="ButtonProfile" runat="server" Text="Profile" />
+            <asp:Button ID="ButtonTransactionReport" runat="server" Text="TransactionReport" />
+            <asp:Button ID="ButtonLogOut" runat="server" Text="Log Out" OnClick="ButtonLogOut_Click" />
+
         </nav>
+        <%}
+            else
+            {  %>
+        <nav>
+            <asp:Button ID="ButtonOrderMakeUp" runat="server" Text="Order Make Up" />
+            <asp:Button ID="ButtonHistory" runat="server" Text="History" />
+            <asp:Button ID="ButtonProfileCustomer" runat="server" Text="Profile" />
+            <asp:Button ID="ButtonLogOutCustomer" runat="server" Text="Log Out" OnClick="ButtonLogOut_Click" />
+        </nav>
+
+
+        <%} %>
+
+
+
+
         <div>
             <asp:ContentPlaceHolder ID="ContentBody" runat="server">
             </asp:ContentPlaceHolder>
