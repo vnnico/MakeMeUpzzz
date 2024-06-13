@@ -105,5 +105,10 @@ namespace ProjectMakeMeUpzzz.Views
         {
             Response.Redirect("~/Views/OrderMakeUp.aspx");
         }
+
+        protected void ButtonOrderQueue_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/HandleTransaction.aspx");
+        }
     }
 }

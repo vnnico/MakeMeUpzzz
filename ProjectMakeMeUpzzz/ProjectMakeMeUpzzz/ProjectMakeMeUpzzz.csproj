@@ -90,6 +90,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\HandleTransaction.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\InsertMakeUp.aspx" />
     <Content Include="Views\InsertMakeUpBrand.aspx" />
@@ -99,6 +100,7 @@
     <Content Include="Views\OrderMakeUp.aspx" />
     <Content Include="Views\Profile.aspx" />
     <Content Include="Views\Register.aspx" />
+    <Content Include="Views\TransactionHistory.aspx" />
     <Content Include="Views\UpdateMakeUp.aspx" />
     <Content Include="Views\UpdateMakeUpBrand.aspx" />
     <Content Include="Views\UpdateMakeUpType.aspx" />
@@ -175,6 +177,13 @@
     <Compile Include="Repositories\TransactionHeaderRepositories.cs" />
     <Compile Include="Repositories\TransactionRepositories.cs" />
     <Compile Include="Repositories\UserRepositories.cs" />
+    <Compile Include="Views\HandleTransaction.aspx.cs">
+      <DependentUpon>HandleTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\HandleTransaction.aspx.designer.cs">
+      <DependentUpon>HandleTransaction.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -251,6 +260,13 @@
     </Compile>
     <Compile Include="Views\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransactionHistory.aspx.cs">
+      <DependentUpon>TransactionHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TransactionHistory.aspx.designer.cs">
+      <DependentUpon>TransactionHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\UpdateMakeUp.aspx.cs">
       <DependentUpon>UpdateMakeUp.aspx</DependentUpon>
