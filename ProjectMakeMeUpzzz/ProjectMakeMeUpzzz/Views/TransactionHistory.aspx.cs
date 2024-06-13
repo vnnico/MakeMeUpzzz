@@ -39,12 +39,13 @@ namespace ProjectMakeMeUpzzz.Views
             }
             if(Responses != null)
             {
-            gvTransactionsHistory.DataSource = Responses.Payload;
-            gvTransactionsHistory.DataBind();
+            gvTransactionsHs.DataSource = Responses.Payload;
+            gvTransactionsHs.DataBind();
             }else if(Responses == null)
             {
                 lbl_error.Text = "No Data Available";
                 lbl_error.Visible = true;
+
             }
         }
         protected void gvTransactionsHistory_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -54,6 +55,11 @@ namespace ProjectMakeMeUpzzz.Views
                 string transactionId = e.CommandArgument.ToString();
                 Response.Redirect($"TransactionDetail.aspx?transactionId={transactionId}");
             }
+        }
+
+        protected void gvTransactionsHs_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
         }
     }
 }
