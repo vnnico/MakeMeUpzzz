@@ -1,7 +1,40 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Nata\\source\\repos\\PSDTESTMERGE\\ProjectMakeMeUpzzz\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\projectmakemeupzzz\\reports\\crystalreport1.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\reports\\crystalreport1.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\views\\transactionreport.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\transactionreport.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\projectmakemeupzzz\\handlers\\transactiondetailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\handlers\\transactiondetailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\projectmakemeupzzz\\factory\\transactionsdetailsfactories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\factory\\transactionsdetailsfactories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\projectmakemeupzzz\\views\\master.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\master.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\projectmakemeupzzz\\views\\master.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\master.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\projectmakemeupzzz\\views\\transactionreport.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\transactionreport.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\projectmakemeupzzz\\dataset\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\dataset\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
@@ -25,15 +54,115 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Master.Master.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Master.Master.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\Master.Master.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Master.Master.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\Master.Master.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAASwG4AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T17:14:45.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Master.Master",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Master.Master",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\Master.Master",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Master.Master",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\Master.Master",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-13T17:14:38.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TransactionsDetailsFactories.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Factory\\TransactionsDetailsFactories.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Factory\\TransactionsDetailsFactories.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Factory\\TransactionsDetailsFactories.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Factory\\TransactionsDetailsFactories.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T17:12:19.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TransactionDetailHandler.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Handlers\\TransactionDetailHandler.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Handlers\\TransactionDetailHandler.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Handlers\\TransactionDetailHandler.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Handlers\\TransactionDetailHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T17:11:55.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TransactionReport.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\TransactionReport.aspx.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\TransactionReport.aspx.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\TransactionReport.aspx.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\TransactionReport.aspx.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAmwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T17:10:11.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TransactionReport.aspx",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\TransactionReport.aspx",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\TransactionReport.aspx",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\TransactionReport.aspx",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\TransactionReport.aspx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-13T17:07:17.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrystalReport1.rpt",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Reports\\CrystalReport1.rpt",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Reports\\CrystalReport1.rpt",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Reports\\CrystalReport1.rpt",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Reports\\CrystalReport1.rpt",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIdSURBVDhPpZJNaBNBFMf/M7ub2NhajSDiwS96CbY2BykojaD0oF5s0YPgQYReLHgpeNCLYv0AexNRb1VUAkJcPXgQEUG89BIaxI9gqzGxH6QmXTef3Wx2nJkmNev25g8ebx7z3n/ezBv8F4wx0lhK7j6fYo3lmowMhl35HoRA3XGk/YvYW\u002BsA2vCrUEIwu1hEJltwmeDc8V5Plx4BAaXEY4J7LxLSt4q4BBS6Eiq8oGm3nXHZ1VCkS9pgfxc62/0yT\u002BASaNRLIWE6ieHB3H1EZsMyVhUKTXU37Yo0RZFeVQiuL14D1tnooBtQcEwcSO9d7aoVdefw5yFC2GG\u002BDsa/OTj228LYwmXejYrkzxkUsqZMNG0TfZkexA99lHETUqlYJ0rV5YEPqfKOG7Glo3MGRSTkx2T4JNp2\u002BzGfmMf3JzNAHijHarJIfz\u002BN0wMh2QoduRrVL9x6NqrWzUt3hjfjYMiHV1NVWNHHCJAOoMof3OBOt10T8XD24kOiv0uynFFkp8ZTrPv8NNs3\u002BpXtifawUmWZWbU6q9l16Z\u002B\u002BTXrHOHHzDPP7ND6iNvSHAtjYrkLTNDzqfQleBIU/rDhdeI1Po4l7JpyqDSTSDoKdPmwLqqhaNdh2vbHrxXWhidcZ9mXBj3yJYr3Pwf7tBnL5HLZu2YRA4O/nERzp2yVrXQJiIhWrdsUwy92/lorZyURqLP4p/YZv/eBXLK9ktQL8AbhJ7xVosbKmAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-06-13T17:05:48.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DataSet1.xsd",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Dataset\\DataSet1.xsd",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Dataset\\DataSet1.xsd",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Dataset\\DataSet1.xsd",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Dataset\\DataSet1.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-06-13T17:01:15.492Z",
+              "EditorCaption": ""
             }
           ]
         }
