@@ -15,7 +15,7 @@
         <nav>
             <asp:Button ID="ButtonHome" runat="server" Text="Home" OnClick="ButtonHome_Click" />
             <asp:Button ID="ButtonManageMakeUp" runat="server" Text="Manage Make Up" OnClick="ButtonManageMakeUp_Click" />
-            <asp:Button ID="ButtonOrderQueue" runat="server" Text="Order Queue" />
+            <asp:Button ID="ButtonOrderQueue" runat="server" Text="Order Queue" OnClick="ButtonOrderQueue_Click" />
             <asp:Button ID="ButtonProfile" runat="server" Text="Profile" OnClick="ButtonProfile_Click" />
             <asp:Button ID="ButtonTransactionReport" runat="server" Text="TransactionReport" />
             <asp:Button ID="ButtonLogOut" runat="server" Text="Log Out" OnClick="ButtonLogOut_Click" />
