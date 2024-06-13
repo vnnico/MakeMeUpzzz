@@ -25,7 +25,7 @@ namespace ProjectMakeMeUpzzz.Views
             BrandGV.DataSource = makeupbrands;
             BrandGV.DataBind();
 
-            List<MakeupType> makeups = (from makeupType in db.MakeupTypes select makeupType).ToList();
+            List<MakeupType> makeupTypes = (from makeupType in db.MakeupTypes select makeupType).ToList();
             GridType.DataSource = makeups;
             GridType.DataBind();
         }
@@ -62,12 +62,6 @@ namespace ProjectMakeMeUpzzz.Views
             }
         }
 
-        protected void InsertGrid_SelectedIndexChanged(object sender, EventArgs e)
-           
-
-
-
-        }
 
         protected void GridType_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
