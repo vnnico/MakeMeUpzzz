@@ -8,7 +8,7 @@ namespace ProjectMakeMeUpzzz.Factory
 {
     public class TransactionsDetailsFactories
     {
-        public static TransactionDetail CreateTransactionDetail(int  transactionId, int makeupId, int quantity)
+        public static TransactionDetail CreateTransactionDetail(int  transactionId, int makeupId, int quantity, int quantity1)
         {
             return new TransactionDetail
             {

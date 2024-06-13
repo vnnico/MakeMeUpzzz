@@ -48,18 +48,14 @@ namespace ProjectMakeMeUpzzz.Views
 
             }
         }
-        protected void gvTransactionsHistory_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            if (e.CommandName == "ViewDetail")
-            {
-                string transactionId = e.CommandArgument.ToString();
-                Response.Redirect($"TransactionDetail.aspx?transactionId={transactionId}");
-            }
-        }
 
         protected void gvTransactionsHs_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-
+            int index = Convert.ToInt32(e.CommandArgument);
+            GridViewRow selectedRow = gvTransactionsHs.Rows[index];
+            string transactionId = selectedRow.Cells[0].Text;
+            System.Diagnostics.Debug.WriteLine($"Transaction ID: {transactionId}");
+            Response.Redirect($"~/Views/TransactionDetail.aspx?Id={transactionId}");
         }
     }
 }

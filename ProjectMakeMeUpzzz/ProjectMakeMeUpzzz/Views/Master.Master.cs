@@ -105,5 +105,15 @@ namespace ProjectMakeMeUpzzz.Views
         {
             Response.Redirect("~/Views/OrderMakeUp.aspx");
         }
+
+        protected void ButtonTransactionHs_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/TransactionHistory.aspx/");
+        }
+
+        protected void ButtonHistory_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/TransactionHistory.aspx/");
+        }
     }
 }

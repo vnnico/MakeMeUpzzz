@@ -17,6 +17,7 @@
             <asp:Button ID="ButtonManageMakeUp" runat="server" Text="Manage Make Up" OnClick="ButtonManageMakeUp_Click" />
             <asp:Button ID="ButtonOrderQueue" runat="server" Text="Order Queue" />
             <asp:Button ID="ButtonProfile" runat="server" Text="Profile" OnClick="ButtonProfile_Click" />
+            <asp:Button ID="ButtonTransactionHs" runat="server" Text="History" OnClick="ButtonTransactionHs_Click" />
             <asp:Button ID="ButtonTransactionReport" runat="server" Text="TransactionReport" />
             <asp:Button ID="ButtonLogOut" runat="server" Text="Log Out" OnClick="ButtonLogOut_Click" />
         </nav>
@@ -25,7 +26,7 @@
             {  %>
         <nav>
             <asp:Button ID="ButtonOrderMakeUp" runat="server" Text="Order Make Up" OnClick="ButtonOrderMakeUp_Click" />
-            <asp:Button ID="ButtonHistory" runat="server" Text="History" />
+            <asp:Button ID="ButtonHistory" runat="server" Text="History" OnClick="ButtonHistory_Click" />
             <asp:Button ID="ButtonProfileCustomer" runat="server" Text="Profile" OnClick="ButtonProfileCustomer_Click" />
             <asp:Button ID="ButtonLogOutCustomer" runat="server" Text="Log Out" OnClick="ButtonLogOut_Click" />
             </nav>           

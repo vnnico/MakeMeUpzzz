@@ -60,6 +60,15 @@ namespace ProjectMakeMeUpzzz.Views
         protected global::System.Web.UI.WebControls.Button ButtonProfile;
 
         /// <summary>
+        /// ButtonTransactionHs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonTransactionHs;
+
+        /// <summary>
         /// ButtonTransactionReport control.
         /// </summary>
         /// <remarks>
