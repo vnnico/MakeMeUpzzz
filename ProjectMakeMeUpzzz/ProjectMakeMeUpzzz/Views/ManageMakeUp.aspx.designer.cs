@@ -15,17 +15,17 @@ namespace ProjectMakeMeUpzzz.Views
     {
 
         /// <summary>
-<<<<<<< HEAD
+
         /// LinkButton1 control.
-=======
+
         /// GridType control.
->>>>>>> VinMakeUpType
+
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
+
         protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
 
         /// <summary>
@@ -54,8 +54,8 @@ namespace ProjectMakeMeUpzzz.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView BrandGV;
-=======
+
         protected global::System.Web.UI.WebControls.GridView GridType;
->>>>>>> VinMakeUpType
+
     }
 }
