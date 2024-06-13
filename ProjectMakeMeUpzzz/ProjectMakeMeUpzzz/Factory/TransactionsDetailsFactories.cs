@@ -19,9 +19,11 @@ namespace ProjectMakeMeUpzzz.Factory
         }
 
         
+        /*
         internal static TransactionDetail CreateTransactionDetail(int v, int transactionID, int makeupId, int quantity)
         {
             throw new NotImplementedException();
         } 
+        */
     }
 }

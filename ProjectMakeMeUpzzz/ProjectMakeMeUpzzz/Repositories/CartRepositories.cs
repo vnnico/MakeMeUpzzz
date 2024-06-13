@@ -8,7 +8,7 @@ namespace ProjectMakeMeUpzzz.Repositories
 {
     public class CartRepositories
     {
-        private static DatabaseEntities1 db = new DatabaseEntities1();
+        private static DatabaseEntities2 db = new DatabaseEntities2();
 
         public static Cart GetCartById(int cartId)
         {

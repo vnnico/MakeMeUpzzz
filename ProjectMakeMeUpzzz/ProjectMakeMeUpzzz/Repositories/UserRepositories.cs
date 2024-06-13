@@ -8,7 +8,7 @@ namespace ProjectMakeMeUpzzz.Repositories
 {
     public class UserRepositories
     {
-        private static DatabaseEntities1 db = new DatabaseEntities1();
+        private static DatabaseEntities2 db = new DatabaseEntities2();
 
         public static List<User> GetAllUsers()
         {

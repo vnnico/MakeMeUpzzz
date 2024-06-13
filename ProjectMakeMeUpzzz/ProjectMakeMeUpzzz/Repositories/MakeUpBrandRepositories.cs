@@ -8,7 +8,7 @@ namespace ProjectMakeMeUpzzz.Repositories
 {
     public class MakeUpBrandRepositories
     {
-        private static readonly DatabaseEntities1 db = new DatabaseEntities1();
+        private static readonly DatabaseEntities2 db = new DatabaseEntities2();
         public static MakeupBrand GetMakeupBrandById(int id)
         {
             return db.MakeupBrands.Find(id);

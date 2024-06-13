@@ -13,7 +13,7 @@ namespace ProjectMakeMeUpzzz.Handlers
     {
         public static Response<TransactionDetail> InsertTransactionDetail(int transactionID, int makeupId, int quantity)
         {
-            TransactionDetail transactionDetail = TransactionsDetailsFactories.CreateTransactionDetail(GenerateID(), transactionID, makeupId, quantity);
+            TransactionDetail transactionDetail = TransactionsDetailsFactories.CreateTransactionDetail(transactionID, makeupId, quantity);
             if (TransactionDetailRepositories.InsertTransactionDetail(transactionDetail) == 0)
             {
                 return new Response<TransactionDetail>
@@ -72,7 +72,7 @@ namespace ProjectMakeMeUpzzz.Handlers
             };
         }
 
-        private static int GenerateID()
+        /*private static int GenerateID()
         {
             TransactionDetail lastTransactionDetail = TransactionDetailRepositories.GetLastTransactionDetail();
             if (lastTransactionDetail == null)
@@ -80,7 +80,7 @@ namespace ProjectMakeMeUpzzz.Handlers
                 return 1;
             }
             return lastTransactionDetail.TransactionDetailID + 1;
-        }
+        }*/
 
         internal static Response<TransactionDetail> InsertTransactionDetail(int transactionID, int makeupID, int? quantity)
         {
