@@ -10,7 +10,7 @@ namespace ProjectMakeMeUpzzz.Repositories
     {
         public static List<TransactionHeader> GetTransactionHeaders()
         {
-            DatabaseEntities1 db = new DatabaseEntities1();
+            DatabaseEntities2 db = new DatabaseEntities2();
             return db.TransactionHeaders.ToList();
         }
     }
