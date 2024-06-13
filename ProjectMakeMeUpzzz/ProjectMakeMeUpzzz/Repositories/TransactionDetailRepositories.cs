@@ -9,7 +9,7 @@ namespace ProjectMakeMeUpzzz.Repositories
 {
     public class TransactionDetailRepositories
     {
-        private static readonly DatabaseEntities2 db = new DatabaseEntities2();
+        private static readonly DatabaseEntities3 db = new DatabaseEntities3();
 
         public static int InsertTransactionDetail(TransactionDetail transactionDetail)
         {

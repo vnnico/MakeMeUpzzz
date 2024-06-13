@@ -13,10 +13,10 @@ namespace ProjectMakeMeUpzzz.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DatabaseEntities2 : DbContext
+    public partial class DatabaseEntities3 : DbContext
     {
-        public DatabaseEntities2()
-            : base("name=DatabaseEntities2")
+        public DatabaseEntities3()
+            : base("name=DatabaseEntities3")
         {
         }
     
@@ -29,8 +29,8 @@ namespace ProjectMakeMeUpzzz.Models
         public virtual DbSet<MakeupBrand> MakeupBrands { get; set; }
         public virtual DbSet<Makeup> Makeups { get; set; }
         public virtual DbSet<MakeupType> MakeupTypes { get; set; }
+        public virtual DbSet<TransactionDetail> TransactionDetails { get; set; }
         public virtual DbSet<TransactionHeader> TransactionHeaders { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<TransactionDetail> TransactionDetails { get; set; }
     }
 }

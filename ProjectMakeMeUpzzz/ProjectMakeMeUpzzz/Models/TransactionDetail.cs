@@ -14,6 +14,7 @@ namespace ProjectMakeMeUpzzz.Models
     
     public partial class TransactionDetail
     {
+        public int TransactionDetailID { get; set; }
         public int TransactionID { get; set; }
         public int MakeupID { get; set; }
         public Nullable<int> Quantity { get; set; }
