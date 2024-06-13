@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Master.Master" AutoEventWireup="true" CodeBehind="TransactionHistory.aspx.cs" Inherits="ProjectMakeMeUpzzz.Views.TransactionHistory" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentBody" runat="server">
 
-    <h1>Transaction History</h1>
+    <h1>Transaction</h1>
+    <h1>History</h1>
     <asp:Label ID="lbl_error" runat="server" Text="" Visible="false"></asp:Label>
     <asp:GridView ID="gvTransactionsHs" runat="server" AutoGenerateColumns="False" OnRowCommand="gvTransactionsHs_RowCommand">
             <Columns>
