@@ -8,7 +8,7 @@ namespace ProjectMakeMeUpzzz.Repositories
 {
     public class MakeUpRepositories
     {
-        private static readonly DatabaseEntities2 db = new DatabaseEntities2();
+        private static readonly DatabaseEntities3 db = new DatabaseEntities3();
         public static Makeup GetLastMakeup()
         {
             return db.Makeups.ToList().LastOrDefault();
