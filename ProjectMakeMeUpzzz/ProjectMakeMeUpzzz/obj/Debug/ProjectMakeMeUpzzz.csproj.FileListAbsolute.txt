@@ -298,9 +298,6 @@ C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzz
 C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\roslyn\vbc.rsp
 C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\roslyn\VBCSCompiler.exe
 C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\EntityFramework.dll
-C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\EntityFramework.SqlServer.dll
-C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\EntityFramework.xml
 C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\EntityFramework.SqlServer.xml
 C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
@@ -372,10 +369,6 @@ C:\Users\Nata\source\repos\PSDTESTMERGE\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\ob
 C:\Users\Nata\source\repos\PSDTESTMERGE\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\obj\Debug\ProjectM.3C78D3DE.Up2Date
 C:\Users\Nata\source\repos\PSDTESTMERGE\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\obj\Debug\ProjectMakeMeUpzzz.dll
 C:\Users\Nata\source\repos\PSDTESTMERGE\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\obj\Debug\ProjectMakeMeUpzzz.pdb
-C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\CrystalDecisions.ReportSource.dll
-C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\CrystalDecisions.Shared.dll
-C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\CrystalDecisions.Web.dll
 C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
 C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
 C:\Users\h0012\Documents\ASP.NET\MakeMeUpzz\ProjectMakeMeUpzzz\ProjectMakeMeUpzzz\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
