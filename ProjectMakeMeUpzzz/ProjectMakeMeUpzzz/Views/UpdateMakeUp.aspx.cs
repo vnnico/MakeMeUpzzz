@@ -12,53 +12,82 @@ namespace ProjectMakeMeUpzzz.Views
 {
     public partial class UpdateMakeUp : System.Web.UI.Page
     {
+
+        protected User user;
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!Page.IsPostBack)
+            if (Session["user"] == null && Request.Cookies["user_auth"] == null)
             {
-                Response<List<MakeupType>> response = MakeupTypeController.GetAllMakeupTypes();
-                if (response.IsSuccess)
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                if (Session["user"] == null)
                 {
-                    MakeUpTypeIdDdl.DataSource = response.Payload;
-                    MakeUpTypeIdDdl.DataValueField = "MakeupTypeID";
-                    MakeUpTypeIdDdl.DataTextField = "MakeupTypeName";
-                    MakeUpTypeIdDdl.DataBind();
+                    int id = Convert.ToInt32(Request.Cookies["user_auth"].Value);
+                    Response<User> response = UserController.GetUserById(id);
+                    user = response.Payload;
+                    Session["user"] = user;
                 }
-                Response<List<MakeupBrand>> response2 = MakeupBrandController.GetAllMakeupBrands();
-                if (response2.IsSuccess)
+                else
                 {
-                    MakeUpBrandIdDdl.DataSource = response2.Payload;
-                    MakeUpBrandIdDdl.DataValueField = "MakeupBrandID";
-                    MakeUpBrandIdDdl.DataTextField = "MakeupBrandName";
-                    MakeUpBrandIdDdl.DataBind();
+                    user = (User)Session["user"];
                 }
-                if (int.TryParse(Request.QueryString["id"], out int id))
+
+
+                if (user.UserRole != "admin")
                 {
-                    Response<Makeup> response3 = MakeupController.GetMakeupById(id);
-                    if (response3.IsSuccess)
+
+
+                    Response.Redirect("~/Views/Home.aspx");
+                }
+
+                if (!Page.IsPostBack)
+                {
+                    Response<List<MakeupType>> response = MakeupTypeController.GetAllMakeupTypes();
+                    if (response.IsSuccess)
                     {
-                        Makeup makeup = response3.Payload;
-                        if (makeup != null)
+                        MakeUpTypeIdDdl.DataSource = response.Payload;
+                        MakeUpTypeIdDdl.DataValueField = "MakeupTypeID";
+                        MakeUpTypeIdDdl.DataTextField = "MakeupTypeName";
+                        MakeUpTypeIdDdl.DataBind();
+                    }
+                    Response<List<MakeupBrand>> response2 = MakeupBrandController.GetAllMakeupBrands();
+                    if (response2.IsSuccess)
+                    {
+                        MakeUpBrandIdDdl.DataSource = response2.Payload;
+                        MakeUpBrandIdDdl.DataValueField = "MakeupBrandID";
+                        MakeUpBrandIdDdl.DataTextField = "MakeupBrandName";
+                        MakeUpBrandIdDdl.DataBind();
+                    }
+                    if (int.TryParse(Request.QueryString["id"], out int id))
+                    {
+                        Response<Makeup> response3 = MakeupController.GetMakeupById(id);
+                        if (response3.IsSuccess)
                         {
-                            UNameTxt.Text = makeup.MakeupName;
-                            PriceTxt.Text = makeup.MakeupPrice.ToString();
-                            WeightTxt.Text = makeup.MakeupWeight.ToString();
-                            MakeUpTypeIdDdl.SelectedValue = makeup.MakeupTypeID.ToString();
-                            MakeUpBrandIdDdl.SelectedValue = makeup.MakeupBrandID.ToString();
-                            ViewState["MakeupID"] = id;
+                            Makeup makeup = response3.Payload;
+                            if (makeup != null)
+                            {
+                                UNameTxt.Text = makeup.MakeupName;
+                                PriceTxt.Text = makeup.MakeupPrice.ToString();
+                                WeightTxt.Text = makeup.MakeupWeight.ToString();
+                                MakeUpTypeIdDdl.SelectedValue = makeup.MakeupTypeID.ToString();
+                                MakeUpBrandIdDdl.SelectedValue = makeup.MakeupBrandID.ToString();
+                                ViewState["MakeupID"] = id;
+                            }
+                        }
+                        else
+                        {
+                            ErrorValidationLabel.Text = response.Message;
+                            ErrorValidationLabel.Visible = true;
                         }
                     }
                     else
                     {
-                        ErrorValidationLabel.Text = response.Message;
+                        ErrorValidationLabel.Text = "Invalid ID.";
                         ErrorValidationLabel.Visible = true;
                     }
-                }
-                else
-                {
-                    ErrorValidationLabel.Text = "Invalid ID.";
-                    ErrorValidationLabel.Visible = true;
                 }
             }
         }
@@ -95,7 +124,7 @@ namespace ProjectMakeMeUpzzz.Views
 
             }
 
-           
+
 
 
 

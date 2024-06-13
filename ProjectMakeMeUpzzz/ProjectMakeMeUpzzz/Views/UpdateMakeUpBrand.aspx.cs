@@ -12,48 +12,65 @@ namespace ProjectMakeMeUpzzz.Views
 {
     public partial class UpdateMakeUpBrand : System.Web.UI.Page
     {
+        protected User user;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user"] != null)
+
+            if (Session["user"] == null && Request.Cookies["user_auth"] == null)
             {
-                User user = (User)Session["user"];
-                if (user.UserRole != "admin")
-                {
-                    Response.Redirect("~/Views/Home.aspx");
-                }
+                Response.Redirect("Login.aspx");
             }
             else
             {
-                Response.Redirect("~/Views/Home.aspx");
-            }
-
-            if (!Page.IsPostBack)
-            {
-                if (int.TryParse(Request.QueryString["id"], out int id))
+                if (Session["user"] == null)
                 {
-                    Response<MakeupBrand> response = MakeupBrandController.GetMakeupBrandById(id);
-                    if (response.IsSuccess)
+                    int id = Convert.ToInt32(Request.Cookies["user_auth"].Value);
+                    Response<User> response = UserController.GetUserById(id);
+                    user = response.Payload;
+                    Session["user"] = user;
+                }
+                else
+                {
+                    user = (User)Session["user"];
+                }
+
+
+                if (user.UserRole != "admin")
+                {
+
+
+                    Response.Redirect("~/Views/Home.aspx");
+                }
+
+                if (!Page.IsPostBack)
+                {
+                    if (int.TryParse(Request.QueryString["id"], out int id))
                     {
-                        MakeupBrand makeupbrand = response.Payload;
-                        if (makeupbrand != null)
+                        Response<MakeupBrand> response = MakeupBrandController.GetMakeupBrandById(id);
+                        if (response.IsSuccess)
                         {
-                            UpdateMBrandNameTB.Text = makeupbrand.MakeupBrandName;
-                            UpdateMBrandRatingTB.Text = makeupbrand.MakeupBrandRating.ToString();
-                            CurrentMBrandIDLbl.Text = makeupbrand.MakeupBrandID.ToString();
+                            MakeupBrand makeupbrand = response.Payload;
+                            if (makeupbrand != null)
+                            {
+                                UpdateMBrandNameTB.Text = makeupbrand.MakeupBrandName;
+                                UpdateMBrandRatingTB.Text = makeupbrand.MakeupBrandRating.ToString();
+                                CurrentMBrandIDLbl.Text = makeupbrand.MakeupBrandID.ToString();
+                            }
+                        }
+                        else
+                        {
+                            UpdateMBrandErrorLbl.Text = response.Message;
+                            UpdateMBrandErrorLbl.Visible = true;
                         }
                     }
                     else
                     {
-                        UpdateMBrandErrorLbl.Text = response.Message;
+                        UpdateMBrandErrorLbl.Text = "Invalid ID.";
                         UpdateMBrandErrorLbl.Visible = true;
                     }
                 }
-                else
-                {
-                    UpdateMBrandErrorLbl.Text = "Invalid ID.";
-                    UpdateMBrandErrorLbl.Visible = true;
-                }
             }
+
         }
 
         protected void UpdateMBrandBtn_Click(object sender, EventArgs e)

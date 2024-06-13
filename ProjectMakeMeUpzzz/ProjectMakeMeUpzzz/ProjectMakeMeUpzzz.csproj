@@ -116,6 +116,7 @@
     <Compile Include="Controllers\TransactionDetailController.cs" />
     <Compile Include="Controllers\TransactionHeaderController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Dataset\DataSet1.Designer.cs" />
     <Compile Include="Factory\CartsFactories.cs" />
     <Compile Include="Factory\MakeUpBrandFactories.cs" />
     <Compile Include="Factory\MakeUpFactories.cs" />
@@ -311,6 +312,13 @@
     </EntityDeploy>
     <Content Include="Models\Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Dataset\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\DataSet1.xsd" />
+    <Content Include="Dataset\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="Views\Master.Master" />
