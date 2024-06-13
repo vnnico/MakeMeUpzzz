@@ -82,9 +82,10 @@ namespace ProjectMakeMeUpzzz.Handlers
             return lastTransactionDetail.TransactionDetailID + 1;
         }*/
 
+        /*
         internal static Response<TransactionDetail> InsertTransactionDetail(int transactionID, int makeupID, int? quantity)
         {
             throw new NotImplementedException();
-        }
+        } */
     }
 }

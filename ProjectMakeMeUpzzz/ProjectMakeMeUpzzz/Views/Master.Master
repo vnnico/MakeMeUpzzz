@@ -24,7 +24,7 @@
             else
             {  %>
         <nav>
-            <asp:Button ID="ButtonOrderMakeUp" runat="server" Text="Order Make Up" />
+            <asp:Button ID="ButtonOrderMakeUp" runat="server" Text="Order Make Up" OnClick="ButtonOrderMakeUp_Click" />
             <asp:Button ID="ButtonHistory" runat="server" Text="History" />
             <asp:Button ID="ButtonProfileCustomer" runat="server" Text="Profile" OnClick="ButtonProfileCustomer_Click" />
             <asp:Button ID="ButtonLogOutCustomer" runat="server" Text="Log Out" OnClick="ButtonLogOut_Click" />
