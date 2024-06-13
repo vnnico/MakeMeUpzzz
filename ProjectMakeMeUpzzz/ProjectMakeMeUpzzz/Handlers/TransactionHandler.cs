@@ -7,7 +7,7 @@ using ProjectMakeMeUpzzz.Repositories;
 
 namespace ProjectMakeMeUpzzz.Handlers
 {
-    public class TransactionHandler
+    public class TransactionController
     {
         public static List<TransactionHeader> GetTransactionHeaders()
         {
