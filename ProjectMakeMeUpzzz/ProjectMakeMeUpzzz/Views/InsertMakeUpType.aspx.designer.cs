@@ -11,51 +11,43 @@ namespace ProjectMakeMeUpzzz.Views
 {
 
 
-    public partial class ManageMakeUp
+    public partial class InsertMakeUpType
     {
 
         /// <summary>
-<<<<<<< HEAD
-        /// LinkButton1 control.
-=======
-        /// GridType control.
->>>>>>> VinMakeUpType
+        /// lbl_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Label lbl_Name;
 
         /// <summary>
-        /// InsertGrid control.
+        /// txt_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView InsertGrid;
+        protected global::System.Web.UI.WebControls.TextBox txt_Name;
 
         /// <summary>
-        /// InsertMBrandLink control.
+        /// lbl_Error control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton InsertMBrandLink;
+        protected global::System.Web.UI.WebControls.Label lbl_Error;
 
         /// <summary>
-        /// BrandGV control.
+        /// submitMakeUpType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView BrandGV;
-=======
-        protected global::System.Web.UI.WebControls.GridView GridType;
->>>>>>> VinMakeUpType
+        protected global::System.Web.UI.WebControls.Button submitMakeUpType;
     }
 }

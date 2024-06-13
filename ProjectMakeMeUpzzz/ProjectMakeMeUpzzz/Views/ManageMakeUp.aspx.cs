@@ -24,6 +24,10 @@ namespace ProjectMakeMeUpzzz.Views
             List<MakeupBrand> makeupbrands = (from makeupbrand in db.MakeupBrands select makeupbrand).ToList();
             BrandGV.DataSource = makeupbrands;
             BrandGV.DataBind();
+
+            List<MakeupType> makeups = (from makeupType in db.MakeupTypes select makeupType).ToList();
+            GridType.DataSource = makeups;
+            GridType.DataBind();
         }
 
 
@@ -59,6 +63,39 @@ namespace ProjectMakeMeUpzzz.Views
         }
 
         protected void InsertGrid_SelectedIndexChanged(object sender, EventArgs e)
+           
+
+
+
+        }
+
+        protected void GridType_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            GridViewRow row = GridType.Rows[e.RowIndex];
+            String id = row.Cells[0].Text.ToString();
+
+
+            Response<MakeupType> response = MakeupTypeController.RemoveMakeupType(id);
+            if (response.IsSuccess)
+            {
+                Response<List<MakeupType>> responses = MakeupTypeController.GetAllMakeupTypes();
+                if (responses.IsSuccess)
+                {
+                    GridType.DataSource = responses.Payload;
+                    GridType.DataBind();
+                }
+
+            }
+        }
+
+        protected void GridType_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridViewRow row = GridType.Rows[e.NewEditIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/Views/UpdateMakeUpType.aspx/?Id=" + id);
+        }
+
+        protected void GridType_SelectedIndexChanged1(object sender, EventArgs e)
         {
 
         }
