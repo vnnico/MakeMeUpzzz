@@ -43,7 +43,7 @@ namespace ProjectMakeMeUpzzz.Views
             gvTransactionsHistory.DataBind();
             }else if(Responses == null)
             {
-                lbl_error.Text = "No Data";
+                lbl_error.Text = "No Data Available";
                 lbl_error.Visible = true;
             }
         }
