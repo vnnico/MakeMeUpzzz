@@ -20,6 +20,5 @@ namespace ProjectMakeMeUpzzz.Models
     
         public virtual Makeup Makeup { get; set; }
         public virtual TransactionHeader TransactionHeader { get; set; }
-        public int TransactionDetailID { get; internal set; }
     }
 }
