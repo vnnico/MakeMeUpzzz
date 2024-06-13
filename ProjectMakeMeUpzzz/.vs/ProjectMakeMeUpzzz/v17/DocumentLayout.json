@@ -1,7 +1,48 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Nata\\source\\repos\\PSDTESTMERGE\\ProjectMakeMeUpzzz\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\views\\updatemakeup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\updatemakeup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\views\\updatemakeup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\updatemakeup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\views\\managemakeup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\managemakeup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\views\\managemakeup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\managemakeup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\helpers\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\helpers\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\handlers\\carthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\handlers\\carthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\views\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\views\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|c:\\users\\h0012\\documents\\asp.net\\makemeupzz\\projectmakemeupzzz\\projectmakemeupzzz\\views\\profile.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F405DFD-3A72-43A5-B361-73B072FD28AF}|ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz.csproj|solutionrelative:projectmakemeupzzz\\views\\profile.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
@@ -25,15 +62,145 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateMakeUp.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\UpdateMakeUp.aspx.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\UpdateMakeUp.aspx.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\UpdateMakeUp.aspx.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\UpdateMakeUp.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T12:22:03.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateMakeUp.aspx",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\UpdateMakeUp.aspx",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\UpdateMakeUp.aspx",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\UpdateMakeUp.aspx",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\UpdateMakeUp.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-13T12:21:48.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartHandler.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Handlers\\CartHandler.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Handlers\\CartHandler.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Handlers\\CartHandler.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Handlers\\CartHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T12:02:24.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Response.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Helpers\\Response.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Helpers\\Response.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Helpers\\Response.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Helpers\\Response.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T12:06:40.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ManageMakeUp.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T15:26:20.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManageMakeUp.aspx",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\ManageMakeUp.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-13T12:09:31.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Controllers\\CartController.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Controllers\\CartController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T12:02:12.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Profile.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Profile.aspx.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\Profile.aspx.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Profile.aspx.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\Profile.aspx.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T12:01:06.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Login.aspx",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\Login.aspx",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Login.aspx",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-13T12:00:55.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "ProjectMakeMeUpzzz\\Views\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\h0012\\Documents\\ASP.NET\\MakeMeUpzz\\ProjectMakeMeUpzzz\\ProjectMakeMeUpzzz\\Views\\Login.aspx.cs",
+              "RelativeToolTip": "ProjectMakeMeUpzzz\\Views\\Login.aspx.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T12:00:57.644Z",
+              "EditorCaption": ""
             }
           ]
         }

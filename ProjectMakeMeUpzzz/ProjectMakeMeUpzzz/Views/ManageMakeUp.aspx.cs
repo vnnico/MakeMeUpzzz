@@ -13,20 +13,20 @@ namespace ProjectMakeMeUpzzz.Views
 {
     public partial class ManageMakeUp : System.Web.UI.Page
     {
-        DatabaseEntities1 db = new DatabaseEntities1();
+        
         protected void Page_Load(object sender, EventArgs e)
 
         {
-            List<Makeup> makeups = (from makeup in db.Makeups select makeup).ToList();
-            InsertGrid.DataSource = makeups;
+            Response<List<Makeup>> responses = MakeupController.GetAllMakeups();
+            InsertGrid.DataSource = responses.Payload;
             InsertGrid.DataBind();
 
-            List<MakeupBrand> makeupbrands = (from makeupbrand in db.MakeupBrands select makeupbrand).ToList();
-            BrandGV.DataSource = makeupbrands;
+            Response<List<MakeupBrand>> response2 = MakeupBrandController.GetAllMakeupBrands();
+            BrandGV.DataSource = response2.Payload;
             BrandGV.DataBind();
 
-            List<MakeupType> makeupTypes = (from makeupType in db.MakeupTypes select makeupType).ToList();
-            GridType.DataSource = makeups;
+            Response<List<MakeupType>> responses3 = MakeupTypeController.GetAllMakeupTypes();
+            GridType.DataSource = responses3.Payload;
             GridType.DataBind();
         }
 
@@ -62,7 +62,10 @@ namespace ProjectMakeMeUpzzz.Views
             }
         }
 
+        protected void InsertGrid_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
         protected void GridType_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             GridViewRow row = GridType.Rows[e.RowIndex];
@@ -133,6 +136,11 @@ namespace ProjectMakeMeUpzzz.Views
             GridViewRow row = BrandGV.Rows[e.NewEditIndex];
             string id = row.Cells[0].Text.ToString();
             Response.Redirect("~/Views/UpdateMakeUpBrand.aspx/?ID=" + id);
+        }
+
+        protected void InsertMTypeLink_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/InsertMakeUpType.aspx");
         }
     }
 }

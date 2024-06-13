@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities1">
+  <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities2">
     <EntitySetMapping Name="Carts">
       <EntityTypeMapping TypeName="DatabaseModel.Cart">
         <MappingFragment StoreEntitySet="Carts">
@@ -40,15 +40,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TransactionDetails">
-      <EntityTypeMapping TypeName="DatabaseModel.TransactionDetail">
-        <MappingFragment StoreEntitySet="TransactionDetails">
-          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
-          <ScalarProperty Name="MakeupID" ColumnName="MakeupID" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TransactionHeaders">
       <EntityTypeMapping TypeName="DatabaseModel.TransactionHeader">
         <MappingFragment StoreEntitySet="TransactionHeaders">
@@ -69,6 +60,15 @@
           <ScalarProperty Name="UserGender" ColumnName="UserGender" />
           <ScalarProperty Name="UserRole" ColumnName="UserRole" />
           <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionDetails">
+      <EntityTypeMapping TypeName="DatabaseModel.TransactionDetail">
+        <MappingFragment StoreEntitySet="TransactionDetails">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="MakeupID" ColumnName="MakeupID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -101,5 +101,10 @@ namespace ProjectMakeMeUpzzz.Views
 
         }
 
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/ManageMakeUp.aspx");
+        }
     }
 }

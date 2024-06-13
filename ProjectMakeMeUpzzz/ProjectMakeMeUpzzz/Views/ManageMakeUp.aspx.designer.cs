@@ -15,27 +15,22 @@ namespace ProjectMakeMeUpzzz.Views
     {
 
         /// <summary>
-
         /// LinkButton1 control.
-
-        /// GridType control.
-
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-
         protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
 
         /// <summary>
-        /// InsertGrid control.
+        /// LinkButton2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView InsertGrid;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
 
         /// <summary>
         /// InsertMBrandLink control.
@@ -47,6 +42,24 @@ namespace ProjectMakeMeUpzzz.Views
         protected global::System.Web.UI.WebControls.LinkButton InsertMBrandLink;
 
         /// <summary>
+        /// InsertGrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView InsertGrid;
+
+        /// <summary>
+        /// GridType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridType;
+
+        /// <summary>
         /// BrandGV control.
         /// </summary>
         /// <remarks>
@@ -54,8 +67,5 @@ namespace ProjectMakeMeUpzzz.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView BrandGV;
-
-        protected global::System.Web.UI.WebControls.GridView GridType;
-
     }
 }
