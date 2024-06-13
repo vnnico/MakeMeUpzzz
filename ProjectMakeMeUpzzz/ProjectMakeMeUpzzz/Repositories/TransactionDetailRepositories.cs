@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using ProjectMakeMeUpzzz.Models;
 
+
 namespace ProjectMakeMeUpzzz.Repositories
 {
     public class TransactionDetailRepositories

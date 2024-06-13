@@ -158,13 +158,7 @@ warning 6002: The table/view 'C:\USERS\NATA\SOURCE\REPOS\PSDTESTMERGE\PROJECTMAK
     <EntitySet Name="MakeupTypes" EntityType="Self.MakeupTypes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TransactionHeaders" EntityType="Self.TransactionHeaders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="TransactionDetails" EntityType="Self.TransactionDetails" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [TransactionDetails].[TransactionID] AS [TransactionID], 
-    [TransactionDetails].[MakeupID] AS [MakeupID], 
-    [TransactionDetails].[Quantity] AS [Quantity]
-    FROM [dbo].[TransactionDetails] AS [TransactionDetails]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="TransactionDetails" EntityType="Self.TransactionDetails" store:Type="Tables" store:Schema="dbo" />
     <AssociationSet Name="FK_Carts_Makeups" Association="Self.FK_Carts_Makeups">
       <End Role="Makeups" EntitySet="Makeups" />
       <End Role="Carts" EntitySet="Carts" />

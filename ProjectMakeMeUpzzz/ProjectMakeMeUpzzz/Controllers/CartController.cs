@@ -48,7 +48,7 @@ namespace ProjectMakeMeUpzzz.Controllers
             return CartHandler.InsertCart(uId, mId, qty);
         }
 
-        public static Response<List<Cart>> GetCardByUserId(int userId)
+        public static Response<List<Cart>> GetCartByUserId(int userId)
         {
             List<string> errors = new List<string>();
             int uId = UserIdValidate(userId, errors);

@@ -112,16 +112,21 @@ namespace ProjectMakeMeUpzzz.Handlers
 
             foreach (Cart cart in carts)
             {
-                Response<TransactionDetail> response = TransactionDetailHandler.InsertTransactionDetail(transactionHeader.TransactionID, cart.MakeupID, cart.Quantity);
-                if (!response.IsSuccess)
+                int quantity = cart.Quantity ?? 0; // Ensure quantity is not null
+                if (quantity > 0)
                 {
-                    RemoveTransactionDetails(transactionHeader);
-                    return new Response<TransactionHeader>
+
+                    Response<TransactionDetail> response = TransactionDetailHandler.InsertTransactionDetail(transactionHeader.TransactionID, cart.MakeupID, quantity);
+                    if (!response.IsSuccess)
                     {
-                        Message = "Failed to checkout",
-                        IsSuccess = false,
-                        Payload = null
-                    };
+                        RemoveTransactionDetails(transactionHeader);
+                        return new Response<TransactionHeader>
+                        {
+                            Message = "Failed to checkout",
+                            IsSuccess = false,
+                            Payload = null
+                        };
+                    }
                 }
             }
 
