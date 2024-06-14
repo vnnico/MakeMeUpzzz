@@ -14,48 +14,61 @@ namespace ProjectMakeMeUpzzz.Views
 {
     public partial class TransactionHistory : System.Web.UI.Page
     {
+        protected User user;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["user"] == null && Request.Cookies["user_auth"] == null)
             {
-                BindTransactionData();
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                if (Session["user"] == null)
+                {
+                    int id = Convert.ToInt32(Request.Cookies["user_auth"].Value);
+                    Response<User> response = UserController.GetUserById(id);
+                    user = response.Payload;
+                    Session["user"] = user;
+                }
+                else
+                {
+                    user = (User)Session["user"];
+                }
+
+
+                if (user.UserRole == "admin")
+                {
+
+                    if(!IsPostBack)
+                    {
+                        Response<List<TransactionHeader>> transactions = TransactionHeaderController.GetAllTransactionHeaders();
+                        if (transactions.IsSuccess)
+                        {
+                            GridViewTransactionHistory.DataSource = transactions.Payload;
+                            GridViewTransactionHistory.DataBind();
+                        }
+                    }
+                }
+                else
+                {
+                    if (!IsPostBack)
+                    {
+                        Response<List<TransactionHeader>> transactions = TransactionHeaderController.GetTransactionHeaderByUserId(user.UserID);
+                        if (transactions.IsSuccess)
+                        {
+                            GridViewTransactionHistory.DataSource = transactions.Payload;
+                            GridViewTransactionHistory.DataBind();
+                        }
+                    }
+                }
             }
         }
 
-        private void BindTransactionData()
+        protected void gvTransactionsHs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var user = (User)Session["User"];
-            int userId = user.UserID;
-            string userRole = user.UserRole;
-
-            Response<List<TransactionHeader>> Responses = null;
-            if (userRole == "admin")
-            {
-                Responses = TransactionHeaderController.GetAllTransactionHeaders();
-            }
-            else if (userRole == "user")
-            {
-                Responses = TransactionHeaderController.GetTransactionHeaderByUserId(userId);
-            }
-            if(Responses != null)
-            {
-            gvTransactionsHs.DataSource = Responses.Payload;
-            gvTransactionsHs.DataBind();
-            }else if(Responses == null)
-            {
-                lbl_error.Text = "No Data Available";
-                lbl_error.Visible = true;
-
-            }
-        }
-
-        protected void gvTransactionsHs_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            int index = Convert.ToInt32(e.CommandArgument);
-            GridViewRow selectedRow = gvTransactionsHs.Rows[index];
-            string transactionId = selectedRow.Cells[0].Text;
-            System.Diagnostics.Debug.WriteLine($"Transaction ID: {transactionId}");
-            Response.Redirect($"~/Views/TransactionDetail.aspx?Id={transactionId}");
+            GridViewRow row = GridViewTransactionHistory.SelectedRow;
+            String id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/Views/TransactionDetailPages.aspx?ID=" + id);
         }
     }
 }

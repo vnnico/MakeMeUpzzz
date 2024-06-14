@@ -19,7 +19,8 @@ namespace ProjectMakeMeUpzzz.Repositories
 
         public static List<TransactionDetail> GetTransactionDetailByTransactionId(int transactionId)
         {
-            return db.TransactionDetails.Where(x => x.TransactionID == transactionId).ToList();
+            return db.TransactionDetails.Where(td => td.TransactionID == transactionId).ToList();
+
         }
 
         public static List<TransactionDetail> GetTransactionDetailById(int transactionId)
