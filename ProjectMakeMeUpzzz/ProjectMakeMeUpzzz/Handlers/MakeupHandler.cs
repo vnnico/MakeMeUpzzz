@@ -12,15 +12,11 @@ namespace ProjectMakeMeUpzzz.Handlers
 {
     public class MakeupHandler
     {
-        public static int GenerateIDMakeup()
+        public static int GenerateMakeupId()
         {
-            Makeup makeup = MakeUpRepositories.GetLastMakeup();
+            Makeup lastMakeup = MakeUpRepositories.GetLastMakeup();
 
-            if (makeup == null)
-            {
-                return 1;
-            }
-            return makeup.MakeupID + 1;
+            return lastMakeup == null ? 1 : lastMakeup.MakeupID + 1;
         }
 
         public static Response<List<Makeup>> GetAllMakeups()
@@ -62,15 +58,16 @@ namespace ProjectMakeMeUpzzz.Handlers
                 Payload = null
             };
         }
-        public static Response<Makeup> InsertMakeup(string name, int price, int weight, int typeid, int brandid)
+
+        public static Response<Makeup> InsertMakeup(string name, int price, int weight, int typeId, int brandId)
         {
-            Makeup makeup = MakeUpFactories.CreateMakeup(GenerateIDMakeup(), name, price, weight, typeid, brandid);
+            Makeup makeup = MakeUpFactories.Create(GenerateMakeupId(), name, price, weight, typeId, brandId);
 
             if (MakeUpRepositories.InsertMakeup(makeup) == 0)
             {
                 return new Response<Makeup>
                 {
-                    Message = "Something went wrong",
+                    Message = "Failed to insert makeup",
                     IsSuccess = false,
                     Payload = null
                 };
@@ -84,16 +81,16 @@ namespace ProjectMakeMeUpzzz.Handlers
             };
         }
 
-        public static Response<Makeup> UpdateMakeup(int id, string name, int price, int weight, int typeid, int brandid)
+        public static Response<Makeup> UpdateMakeup(int id, string name, int price, int weight, int typeId, int brandId)
         {
-            Makeup makeup = MakeUpFactories.CreateMakeup(id, name, price, weight, typeid, brandid);
+            Makeup makeup = MakeUpFactories.Create(id, name, price, weight, typeId, brandId);
             Makeup updatedMakeup = MakeUpRepositories.UpdateMakeup(makeup);
 
             if (updatedMakeup == null)
             {
                 return new Response<Makeup>
                 {
-                    Message = "Something went wrong",
+                    Message = "Failed to update makeup",
                     IsSuccess = false,
                     Payload = null
                 };
@@ -103,14 +100,13 @@ namespace ProjectMakeMeUpzzz.Handlers
             {
                 Message = "Success",
                 IsSuccess = true,
-                Payload = makeup
+                Payload = updatedMakeup
             };
         }
 
         public static Response<Makeup> DeleteMakeup(int id)
         {
-            try
-            {
+            
                 Makeup deletedMakeup = MakeUpRepositories.DeleteMakeup(id);
                 if (deletedMakeup != null)
                 {
@@ -131,17 +127,7 @@ namespace ProjectMakeMeUpzzz.Handlers
                     };
                 }
             }
-            catch (Exception ex)
-            {
-                return new Response<Makeup>
-                {
-                    IsSuccess = false,
-                    Message = $"An error occurred: {ex.Message}",
-                    Payload = null
-                };
-            }
+         
         }
-
-      
     }
-}
+

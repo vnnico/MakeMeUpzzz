@@ -99,7 +99,7 @@ namespace ProjectMakeMeUpzzz.Handlers
 
         public static Response<TransactionHeader> CheckoutCart(List<Cart> carts)
         {
-            TransactionHeader transactionHeader = TransactionHeadersFactories.CreateTransactionHeader(GenerateTransactionID(), carts[0].UserID, DateTime.Now, "unhandled");
+            TransactionHeader transactionHeader = TransactionHeadersFactories.Create(GenerateTransactionID(), carts[0].UserID, DateTime.Now, "unhandled");
             if (TransactionHeaderRepositories.InsertTransactionHeader(transactionHeader) == 0)
             {
                 return new Response<TransactionHeader>
@@ -116,7 +116,7 @@ namespace ProjectMakeMeUpzzz.Handlers
                 if (quantity > 0)
                 {
 
-                    Response<TransactionDetail> response = TransactionDetailHandler.InsertTransactionDetail(transactionHeader.TransactionID, cart.MakeupID, quantity);
+                    Response<TransactionDetail> response = TransactionDetailHandler.AddTransactionDetail(transactionHeader.TransactionID, cart.MakeupID, quantity);
                     if (!response.IsSuccess)
                     {
                         RemoveTransactionDetails(transactionHeader);
@@ -150,7 +150,7 @@ namespace ProjectMakeMeUpzzz.Handlers
 
         private static Response<TransactionHeader> RemoveTransactionDetails(TransactionHeader transactionHeader)
         {
-            TransactionDetailHandler.DeleteTransactionDetails(transactionHeader.TransactionID);
+            TransactionDetailHandler.RetrieveTransactionDetailByTransactionId(transactionHeader.TransactionID);
             if (TransactionHeaderRepositories.DeleteTransactionHeader(transactionHeader.TransactionID) == 0)
             {
                 return new Response<TransactionHeader>

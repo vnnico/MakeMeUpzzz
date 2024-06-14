@@ -2,8 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentBody" runat="server">
     <h1>Update Make Up Brand</h1>
-    Make Up Brand ID:
-    <asp:Label ID="CurrentMBrandIDLbl" runat="server"></asp:Label>
+
     <div>
         <asp:Label ID="UpdateMBrandNameLbl" runat="server" Text="Make Up Brand Name"></asp:Label>
         <asp:TextBox ID="UpdateMBrandNameTB" runat="server"></asp:TextBox>

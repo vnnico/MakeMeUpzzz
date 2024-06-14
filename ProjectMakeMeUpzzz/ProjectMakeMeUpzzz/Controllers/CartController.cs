@@ -10,104 +10,104 @@ namespace ProjectMakeMeUpzzz.Controllers
 {
     public class CartController
     {
-        public static Response<List<Cart>> RemoveCartsById(List<int> cartIds)
+
+
+        private static Response<T> CreateErrorResponse<T>(List<String> ErrorList)
         {
-            List<string> errors = new List<string>();
-            foreach (var cartId in cartIds)
+            String errorMessage = String.Join(" | ", ErrorList);
+            return new Response<T>
             {
-                CartIdValidate(cartId, errors);
-            }
-            if (errors.Count > 0)
+                Message = errorMessage,
+                IsSuccess = false,
+                Payload = default,
+            };
+        }
+
+        private static int ValidateUserId(int userId, List<String> ErrorList)
+        {
+            if (userId > 0)
             {
-                return GenerateErrorResponse<List<Cart>>(errors);
+                return userId;
             }
-            return CartHandler.RemoveCartsById(cartIds);
+            ErrorList.Add("User ID cannot be empty");
+            return 0;
+        }
+
+        private static int ValidateCartId(int cartId, List<String> ErrorList)
+        {
+            if (cartId > 0)
+            {
+                return cartId;
+            }
+
+            ErrorList.Add("CartID cannot be empty");
+            return 0;
+        }
+
+        private static int ValidateMakeupId(int makeupId, List<String> ErrorList)
+        {
+            if (makeupId > 0)
+            {
+                return makeupId;
+            }
+            ErrorList.Add("MakeupID cannot be empty");
+            return 0;
+        }
+
+        private static int ValidateQuantity(int quantity, List<String> ErrorList)
+        {
+            if (quantity > 0)
+            {
+                return quantity;
+            }
+            ErrorList.Add("Quantity must be greater than 0");
+            return 0;
+        }
+
+
+  
+        public static Response<Cart> RemoveAllCartsByUserID(int userID)
+        {
+            return CartHandler.RemoveAllCartByUserID(userID);
         }
 
         public static Response<Cart> GetCartById(int cartId)
         {
-            List<string> errors = new List<string>();
-            int cId = CartIdValidate(cartId, errors);
-            if (errors.Count > 0)
-            {
-                return GenerateErrorResponse<Cart>(errors);
-            }
-            return CartHandler.GetCartById(cId);
-        }
+            List<String> ErrorList = new List<String>();
+            int validatedCartId = ValidateCartId(cartId, ErrorList);
 
+            if (ErrorList.Any())
+            {
+                return CreateErrorResponse<Cart>(ErrorList);
+            }
+            return CartHandler.GetCartById(validatedCartId);
+        }
         public static Response<Cart> InsertCart(int userId, int makeupId, int quantity)
         {
-            List<string> errors = new List<string>();
-            int uId = UserIdValidate(userId, errors);
-            int mId = MakeupIdValidate(makeupId, errors);
-            int qty = QuantityValidate(quantity, errors);
-            if (errors.Count > 0)
+            List<String> errors = new List<String>();
+            int validatedUserId = ValidateUserId(userId, errors);
+            int validatedMakeupId = ValidateMakeupId(makeupId, errors);
+            int validatedQuantity = ValidateQuantity(quantity, errors);
+
+            if (errors.Any())
             {
-                return GenerateErrorResponse<Cart>(errors);
+                return CreateErrorResponse<Cart>(errors);
             }
-            return CartHandler.InsertCart(uId, mId, qty);
+
+            return CartHandler.AddCart(validatedUserId, validatedMakeupId, validatedQuantity);
         }
 
-        public static Response<List<Cart>> GetCartByUserId(int userId)
+
+        public static Response<List<Cart>> GetCartsByUserId(int userId)
         {
-            List<string> errors = new List<string>();
-            int uId = UserIdValidate(userId, errors);
-            if (errors.Count > 0)
+            List<String> errors = new List<String>();
+            int validatedUserId = ValidateUserId(userId, errors);
+            if (errors.Any())
             {
-                return GenerateErrorResponse<List<Cart>>(errors);
+                return CreateErrorResponse<List<Cart>>(errors);
             }
-            return CartHandler.GetCartByUserId(uId);
+            return CartHandler.GetCartByUserId(validatedUserId);
         }
 
-        private static Response<T> GenerateErrorResponse<T>(List<string> errors)
-        {
-            string message = "";
-            foreach (var error in errors)
-            {
-                message += error + "|";
-            }
-            return new Response<T>
-            {
-                Message = message,
-                IsSuccess = false,
-                Payload = default
-            };
-        }
-
-        private static int CartIdValidate(int cartId, List<string> errors)
-        {
-            if (cartId <= 0)
-            {
-                errors.Add("Cart Id must be greater than 0");
-            }
-            return cartId;
-        }
-
-        private static int MakeupIdValidate(int makeupId, List<string> errors)
-        {
-            if (makeupId <= 0)
-            {
-                errors.Add("Makeup Id must be greater than 0");
-            }
-            return makeupId;
-        }
-
-        private static int QuantityValidate(int qty, List<string> errors)
-        {
-            if (qty <= 0)
-            {
-                errors.Add("Quantity must be greater than 0");
-            }
-            return qty;
-        }
-
-        private static int UserIdValidate(int userId, List<string> errors)
-        {
-            if (userId <= 0)
-            {
-                errors.Add("User Id must be greater than 0");
-            }
-            return userId;
-        }
     }
 }

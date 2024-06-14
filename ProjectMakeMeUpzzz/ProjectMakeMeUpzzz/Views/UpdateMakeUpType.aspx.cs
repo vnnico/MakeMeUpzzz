@@ -51,23 +51,16 @@ namespace ProjectMakeMeUpzzz.Views
                         if (response.IsSuccess)
                         {
                             MakeupType makeupType = response.Payload;
-                            if (makeupType != null)
-                            {
-                                txt_MakeUpTypeID.Text = makeupType.MakeupTypeID.ToString();
-                                txt_MakeUpTypeName.Text = makeupType.MakeupTypeName;
-
-                            }
+                            txt_MakeUpTypeName.Text = makeupType.MakeupTypeName;
                         }
                         else
                         {
                             lbl_Error.Text = response.Message;
-                            lbl_Error.Visible = true;
                         }
                     }
                     else
                     {
                         lbl_Error.Text = "Invalid ID";
-                        lbl_Error.Visible = true;
                     }
                 }
             }
@@ -76,26 +69,19 @@ namespace ProjectMakeMeUpzzz.Views
 
         protected void UpdateMakeUpTypeBtn_Click(object sender, EventArgs e)
         {
-            try
+
+            String id = Request.QueryString["Id"];
+            String name = txt_MakeUpTypeName.Text.ToString();
+
+            Response<MakeupType> response = MakeupTypeController.UpdateMakeupType(id, name);
+
+
+            if (response.IsSuccess)
             {
-                String id = Request.QueryString["Id"];
-                String name = txt_MakeUpTypeName.Text.ToString();
-
-                Response<MakeupType> response = MakeupTypeController.UpdateMakeupType(id, name);
-
-
-                if (response.IsSuccess)
-                {
-                    Response.Redirect("~/Views/ManageMakeUp.aspx");
-                }
-                lbl_Error.Text = response.Message;
-                lbl_Error.Visible = true;
+                Response.Redirect("~/Views/ManageMakeUp.aspx");
             }
-            catch (Exception ex)
-            {
-                lbl_Error.Text = ex.Message;
-                lbl_Error.Visible = true;
-            }
+            lbl_Error.Text = response.Message;
+
         }
 
         protected void gobackBtn_Click(object sender, EventArgs e)

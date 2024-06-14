@@ -10,6 +10,7 @@
         <asp:Label ID="lbl_Error" runat="server" Text="[Error Label]" Visible="false"></asp:Label>
     </div>
     <div>
+        <asp:Button ID="ButtonBack" runat="server" Text="Back" OnClick="ButtonBack_Click" />
         <asp:Button ID="submitMakeUpType" runat="server" Text="Submit" OnClick="submitMakeUpType_Click" />
     </div>
 </asp:Content>

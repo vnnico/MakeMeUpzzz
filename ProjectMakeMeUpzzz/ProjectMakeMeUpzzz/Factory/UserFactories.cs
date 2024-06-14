@@ -24,12 +24,6 @@ namespace ProjectMakeMeUpzzz.Factory
           
         }
 
-        
-        /*
-        internal static User CreateUser(int v, string username, string email, DateTime dob, string gender, string password)
-        {
-            throw new NotImplementedException();
-        } */
-        
+   
     }
 }

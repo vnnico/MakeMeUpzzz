@@ -8,7 +8,22 @@ namespace ProjectMakeMeUpzzz.Repositories
 {
     public class TransactionHeaderRepositories
     {
-        private static readonly DatabaseEntities3 db = new DatabaseEntities3();
+        private static DatabaseEntities3 db = new DatabaseEntities3();
+
+        public static List<TransactionHeader> GetAllTransactionHeaders()
+        {
+            return db.TransactionHeaders.ToList();
+        }
+
+
+        public static TransactionHeader GetTransactionHeaderById(int id)
+        {
+            return db.TransactionHeaders.Find(id);
+        }
+        public static List<TransactionHeader> GetTransactionHeaderByUserId(int userId)
+        {
+            return db.TransactionHeaders.Where(x => x.UserID == userId).ToList();
+        }
 
         public static TransactionHeader GetLastTransactionHeader()
         {
@@ -21,20 +36,6 @@ namespace ProjectMakeMeUpzzz.Repositories
             return db.SaveChanges();
         }
 
-        public static TransactionHeader GetTransactionHeaderById(int id)
-        {
-            return db.TransactionHeaders.Find(id);
-        }
-
-        public static List<TransactionHeader> GetTransactionHeaderByUserId(int userId)
-        {
-            return db.TransactionHeaders.Where(x => x.UserID == userId).ToList();
-        }
-
-        public static List<TransactionHeader> GetAllTransactionHeaders()
-        {
-            return db.TransactionHeaders.ToList();
-        }
 
         public static TransactionHeader UpdateTransactionHeader(TransactionHeader transactionHeader)
         {
@@ -43,19 +44,20 @@ namespace ProjectMakeMeUpzzz.Repositories
             updatedTransactionHeader.TransactionDate = transactionHeader.TransactionDate;
             updatedTransactionHeader.Status = transactionHeader.Status;
             db.SaveChanges();
+
             return transactionHeader;
         }
 
         public static TransactionHeader UpdateTransactionHeaderStatus(TransactionHeader transaction)
         {
-            TransactionHeader updatedTransactionHeader = db.TransactionHeaders.Find(transaction.TransactionID);
-            if (updatedTransactionHeader.Status == "unhandled")
+            TransactionHeader updateStatus = db.TransactionHeaders.Find(transaction.TransactionID);
+            if (updateStatus.Status == "unhandled")
             {
-                updatedTransactionHeader.Status = "handled";
+                updateStatus.Status = "handled";
             }
             else
             {
-                updatedTransactionHeader.Status = "unhandled";
+                updateStatus.Status = "unhandled";
             }
             db.SaveChanges();
             return transaction;

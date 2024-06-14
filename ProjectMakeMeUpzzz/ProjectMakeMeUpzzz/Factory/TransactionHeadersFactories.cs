@@ -8,7 +8,7 @@ namespace ProjectMakeMeUpzzz.Factory
 {
     public class TransactionHeadersFactories
     {
-        public static TransactionHeader CreateTransactionHeader(int transactionId, int userId, DateTime transactionDate, string status) 
+        public static TransactionHeader Create(int transactionId, int userId, DateTime transactionDate, string status) 
         {
 
             return new TransactionHeader

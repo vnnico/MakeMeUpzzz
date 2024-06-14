@@ -29,12 +29,14 @@ namespace ProjectMakeMeUpzzz.Views
             String username = TextBoxUsername.Text;
             String email = TextBoxEmail.Text;
             String gender = RadioButtonListGender.SelectedValue;
-            DateTime dob = DateTime.Parse(TextBoxDOB.Text);
-            
+            DateTime dobNew = DateTime.Parse(TextBoxDOB.Text);
             String password = TextBoxPassword.Text;
             String confirmPassword = TextBoxConfirmPassword.Text;
 
-            Response<User> response = UserController.Register(username, email, dob, gender, password, confirmPassword);
+            
+
+
+            Response<User> response = UserController.Register(username, email, dobNew, gender, password, confirmPassword);
 
             if (response.IsSuccess)
             {
@@ -43,7 +45,7 @@ namespace ProjectMakeMeUpzzz.Views
             }
 
             LabelError.Text = response.Message;
-            //LabelError.Visible = true;
+          
 
         }
 

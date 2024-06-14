@@ -11,7 +11,7 @@ using ProjectMakeMeUpzzz.Models;
 namespace ProjectMakeMeUpzzz.Views
 {
     public partial class InsertMakeUp : System.Web.UI.Page
-        
+
     {
         protected User user;
         protected void Page_Load(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace ProjectMakeMeUpzzz.Views
                 if (user.UserRole != "admin")
                 {
                     Response.Redirect("~/Views/Home.aspx");
-                    
+
                 }
 
                 if (!Page.IsPostBack)
@@ -62,33 +62,34 @@ namespace ProjectMakeMeUpzzz.Views
                     }
                 }
             }
-            
-        }
-    
 
-    
+        }
+
+
+
 
         protected void InsertBtn_Click(object sender, EventArgs e)
         {
-           
-            
-                string name = NameTxt.Text;
-                string price = PriceTxt.Text;
-                string weight = WeightTxt.Text;
-                string typeid = MakeUpTypeIdDdl.SelectedValue;
-                string brandid = MakeUpBrandIdDdl.SelectedValue;
 
-                Response<Makeup> response = MakeupController.InsertMakeup(name, price, weight, typeid, brandid);
-                if (response.IsSuccess)
-                {
-                    Response.Redirect("~/Views/ManageMakeUp.aspx");
-                }
 
-                ErrorValidationLabel.Text = "Weight is Overcappacity";
-                ErrorValidationLabel.Visible = true;
-            
-             
-            
+            string name = NameTxt.Text;
+            string price = PriceTxt.Text;
+            string weight = WeightTxt.Text;
+            string typeid = MakeUpTypeIdDdl.SelectedValue;
+            string brandid = MakeUpBrandIdDdl.SelectedValue;
+
+            Response<Makeup> response = MakeupController.InsertMakeup(name, price, weight, typeid, brandid);
+            if (response.IsSuccess)
+            {
+                Response.Redirect("~/Views/ManageMakeUp.aspx");
+            }
+            else
+            {
+                ErrorValidationLabel.Text = response.Message;
+            }
+
+
+
         }
         protected void backButton_Click(object sender, EventArgs e)
         {

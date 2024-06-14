@@ -11,32 +11,23 @@ namespace ProjectMakeMeUpzzz.Handlers
 {
     public class MakeupBrandHandler
     {
-        public static int GenerateIDMakeupBrand()
-        {
-            MakeupBrand makeup = MakeUpBrandRepositories.GetLastMakeupBrand();
-
-            if (makeup == null)
-            {
-                return 1;
-            }
-            return makeup.MakeupBrandID + 1;
-        }
+   
 
         public static Response<List<MakeupBrand>> GetAllMakeupBrands()
         {
-            List<MakeupBrand> makeups = MakeUpBrandRepositories.GetAllMakeupBrands();
-            if (makeups.Count > 0)
+            List<MakeupBrand> makeupBrands = MakeUpBrandRepositories.GetAllMakeupBrands();
+            if (makeupBrands.Count > 0)
             {
                 return new Response<List<MakeupBrand>>
                 {
-                    Message = "Success",
+                    Message = "No Makeup Brands founded",
                     IsSuccess = true,
-                    Payload = makeups
+                    Payload = makeupBrands
                 };
             }
             return new Response<List<MakeupBrand>>
             {
-                Message = "No makeups found",
+                Message = "No Makeup Brands founded",
                 IsSuccess = false,
                 Payload = null
             };
@@ -44,32 +35,45 @@ namespace ProjectMakeMeUpzzz.Handlers
 
         public static Response<MakeupBrand> GetMakeupBrandById(int id)
         {
-            MakeupBrand makeup = MakeUpBrandRepositories.GetMakeupBrandById(id);
-            if (makeup != null)
+            MakeupBrand makeupBrand = MakeUpBrandRepositories.GetMakeupBrandById(id);
+            if (makeupBrand == null)
             {
                 return new Response<MakeupBrand>
                 {
-                    Message = "Success",
-                    IsSuccess = true,
-                    Payload = makeup
+                    Message = "No Makeup Brands founded",
+                    IsSuccess = false,
+                    Payload = null
                 };
+           
             }
             return new Response<MakeupBrand>
             {
-                Message = "Makeup not found",
-                IsSuccess = false,
-                Payload = null
+                Message = "No Makeup Brands founded",
+                IsSuccess = true,
+                Payload = makeupBrand
             };
+
         }
         public static Response<MakeupBrand> InsertMakeupBrand(string name, int rating)
         {
-            MakeupBrand makeup = MakeUpBrandFactories.CreateMakeUpBrand(GenerateIDMakeupBrand(), name, rating);
 
-            if (MakeUpBrandRepositories.InsertMakeupBrand(makeup) == 0)
+            MakeupBrand lastMakeupBrand = MakeUpBrandRepositories.GetLastMakeupBrand();
+            int id = Convert.ToInt32(lastMakeupBrand.MakeupBrandID);
+            if (lastMakeupBrand == null)
+            {
+                id = 1;
+            }
+            else
+            {
+                id += 1;
+            };
+            MakeupBrand makeupBrand = MakeUpBrandFactories.Create(id, name, rating);
+
+            if (MakeUpBrandRepositories.AddMakeUpBrand(makeupBrand) == null)
             {
                 return new Response<MakeupBrand>
                 {
-                    Message = "Something went wrong",
+                    Message = "Failed to Insert new make up brand",
                     IsSuccess = false,
                     Payload = null
                 };
@@ -77,21 +81,22 @@ namespace ProjectMakeMeUpzzz.Handlers
 
             return new Response<MakeupBrand>
             {
-                Message = "Success",
+                Message = "Successfully added new Make up brand",
                 IsSuccess = true,
-                Payload = makeup
+                Payload = makeupBrand
             };
         }
 
-        public static Response<MakeupBrand> UpdateMakeupBrand(int id, string brandName, int rating)
+        public static Response<MakeupBrand> UpdateMakeupBrand(int id, string name, int rating)
         {
-            MakeupBrand makeupBrand = MakeUpBrandFactories.CreateMakeUpBrand(id, brandName, rating);
+            MakeupBrand makeupBrand = MakeUpBrandFactories.Create(id, name, rating);
             MakeupBrand updatedMakeupBrand = MakeUpBrandRepositories.UpdateMakeupBrand(makeupBrand);
+
             if (updatedMakeupBrand == null)
             {
                 return new Response<MakeupBrand>
                 {
-                    Message = "Something went wrong",
+                    Message = "Failed to update make up brand",
                     IsSuccess = false,
                     Payload = null
                 };
@@ -99,7 +104,7 @@ namespace ProjectMakeMeUpzzz.Handlers
 
             return new Response<MakeupBrand>
             {
-                Message = "Success",
+                Message = "Successfully updated make up brand",
                 IsSuccess = true,
                 Payload = makeupBrand
             };
@@ -109,16 +114,18 @@ namespace ProjectMakeMeUpzzz.Handlers
         public static Response<MakeupBrand> RemoveMakeupBrandById(int brandId)
         {
             MakeupBrand makeupBrand = MakeUpBrandRepositories.GetMakeupBrandById(brandId);
-            List<Makeup> makeups = MakeUpRepositories.GetMakeupsByBrandId(brandId);
-            if (makeups.Count > 0)
+
+            List<Makeup> makeupBrands = MakeUpRepositories.GetAllMakeupsByBrandId(brandId);
+
+            if (makeupBrands.Count > 0)
             {
-                foreach (Makeup makeup in makeups)
+                foreach (Makeup makeup in makeupBrands)
                 {
                     if (MakeUpRepositories.DeleteMakeup(makeup.MakeupID) == null)
                     {
                         return new Response<MakeupBrand>
                         {
-                            Message = "Failed to remove makeup id:" + makeup.MakeupID,
+                            Message = "Failed to remove",
                             IsSuccess = false,
                             Payload = null
                         };
@@ -129,14 +136,14 @@ namespace ProjectMakeMeUpzzz.Handlers
             {
                 return new Response<MakeupBrand>
                 {
-                    Message = "Something went wrong",
+                    Message = "Failed to delete make up brand",
                     IsSuccess = false,
                     Payload = null
                 };
             }
             return new Response<MakeupBrand>
             {
-                Message = "Success",
+                Message = "Successfully remove make up brand",
                 IsSuccess = true,
                 Payload = makeupBrand
             };

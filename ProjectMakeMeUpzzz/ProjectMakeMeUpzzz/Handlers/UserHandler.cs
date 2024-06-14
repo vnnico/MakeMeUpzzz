@@ -141,7 +141,7 @@ namespace ProjectMakeMeUpzzz.Handlers
 
             User user = UserFactories.Create(GenerateID(), username, email, dob, gender,role, password);
 
-            if (UserRepositories.RegisterUser(user) == 0)
+            if (UserRepositories.AddUser(user) == 0)
             {
                 return new Response<User>
                 {

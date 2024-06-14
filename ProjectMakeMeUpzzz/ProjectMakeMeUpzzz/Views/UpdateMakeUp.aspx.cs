@@ -80,13 +80,11 @@ namespace ProjectMakeMeUpzzz.Views
                         else
                         {
                             ErrorValidationLabel.Text = response.Message;
-                            ErrorValidationLabel.Visible = true;
                         }
                     }
                     else
                     {
                         ErrorValidationLabel.Text = "Invalid ID.";
-                        ErrorValidationLabel.Visible = true;
                     }
                 }
             }
@@ -98,34 +96,20 @@ namespace ProjectMakeMeUpzzz.Views
         {
 
 
+            string id = Request.QueryString["Id"];
+            string name = UNameTxt.Text;
+            string price = PriceTxt.Text;
+            string weight = WeightTxt.Text;
+            string typeid = MakeUpTypeIdDdl.SelectedValue;
+            string brandid = MakeUpBrandIdDdl.SelectedValue;
 
-            try
+            Response<Makeup> response = MakeupController.UpdateMakeup(id, name, price, weight, typeid, brandid);
+            if (response.IsSuccess)
             {
-                string id = Request.QueryString["Id"];
-                string name = UNameTxt.Text;
-                string price = PriceTxt.Text;
-                string weight = WeightTxt.Text;
-                string typeid = MakeUpTypeIdDdl.SelectedValue;
-                string brandid = MakeUpBrandIdDdl.SelectedValue;
-
-                Response<Makeup> response = MakeupController.Update(id, name, price, weight, typeid, brandid);
-                if (response.IsSuccess)
-                {
-                    Response.Redirect("~/Views/ManageMakeUp.aspx");
-                }
-
-                ErrorValidationLabel.Text = response.Message;
-                ErrorValidationLabel.Visible = true;
-            }
-            catch (Exception error)
-            {
-                ErrorValidationLabel.Text = error.Message;
-                ErrorValidationLabel.Visible = true;
-
+                Response.Redirect("~/Views/ManageMakeUp.aspx");
             }
 
-
-
+            ErrorValidationLabel.Text = response.Message;
 
 
         }

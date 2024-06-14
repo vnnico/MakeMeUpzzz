@@ -54,19 +54,17 @@ namespace ProjectMakeMeUpzzz.Views
                             {
                                 UpdateMBrandNameTB.Text = makeupbrand.MakeupBrandName;
                                 UpdateMBrandRatingTB.Text = makeupbrand.MakeupBrandRating.ToString();
-                                CurrentMBrandIDLbl.Text = makeupbrand.MakeupBrandID.ToString();
+
                             }
                         }
                         else
                         {
                             UpdateMBrandErrorLbl.Text = response.Message;
-                            UpdateMBrandErrorLbl.Visible = true;
                         }
                     }
                     else
                     {
                         UpdateMBrandErrorLbl.Text = "Invalid ID.";
-                        UpdateMBrandErrorLbl.Visible = true;
                     }
                 }
             }
@@ -75,26 +73,20 @@ namespace ProjectMakeMeUpzzz.Views
 
         protected void UpdateMBrandBtn_Click(object sender, EventArgs e)
         {
-            try
+
+            String MBrandName = UpdateMBrandNameTB.Text.ToString();
+            String MBrandRating = UpdateMBrandRatingTB.Text.ToString();
+
+            Response<MakeupBrand> response = MakeupBrandController.UpdateMakeupBrand(Request.QueryString["id"], MBrandName, MBrandRating);
+
+            if (response.IsSuccess == true)
             {
-                String MBrandName = UpdateMBrandNameTB.Text.ToString();
-                String MBrandRating = UpdateMBrandRatingTB.Text.ToString();
-
-                Response<MakeupBrand> response = MakeupBrandController.UpdateMakeupBrand(Request.QueryString["id"], MBrandName, MBrandRating);
-
-                if (response.IsSuccess == true)
-                {
-                    Response.Redirect("~/Views/ManageMakeup.aspx");
-                }
-
-                UpdateMBrandErrorLbl.Text = response.Message;
-                UpdateMBrandErrorLbl.Visible = true;
+                Response.Redirect("~/Views/ManageMakeup.aspx");
             }
-            catch (Exception error)
-            {
-                UpdateMBrandErrorLbl.Text = error.Message;
-                UpdateMBrandErrorLbl.Visible = true;
-            }
+
+            UpdateMBrandErrorLbl.Text = response.Message;
+
+
         }
 
         protected void BacktoManageMakeUpBtn_Click(object sender, EventArgs e)

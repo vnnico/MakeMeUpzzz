@@ -9,37 +9,46 @@ namespace ProjectMakeMeUpzzz.Repositories
     public class CartRepositories
     {
         private static DatabaseEntities3 db = new DatabaseEntities3();
-
-        public static Cart GetCartById(int cartId)
-        {
-            return db.Carts.Find(cartId);
-        }
-
         public static List<Cart> GetCartByUserId(int userId)
         {
             return db.Carts.Where(x => x.UserID == userId).ToList();
         }
-
-        public static int InsertCart(Cart cart)
+        public static Cart GetCartById(int cartId)
         {
-            db.Carts.Add(cart);
-            return db.SaveChanges();
-        }
-
-        public static int RemoveCartById(int cardId)
-        {
-            Cart delete = GetCartById(cardId);
-            if (delete != null)
-            {
-                db.Carts.Remove(delete);
-                return db.SaveChanges();
-            }
-            return 0;
+            return db.Carts.Find(cartId);
         }
 
         public static Cart GetLastCart()
         {
             return db.Carts.ToList().LastOrDefault();
         }
+
+        public static Cart AddCart(Cart cart)
+        {
+            db.Carts.Add(cart);
+            db.SaveChanges();
+            return cart;
+        }
+
+        public static int RemoveAllCartByUserID(int userID)
+        {
+            List<Cart> carts = GetCartByUserId(userID);
+
+            if (carts != null && carts.Count > 0)
+            {
+
+                foreach (Cart cart in carts)
+                {
+                    db.Carts.Remove(cart);
+                    db.SaveChanges();
+                }
+
+                return 1;
+            }
+
+            return 0;
+
+        }
+
     }
 }
