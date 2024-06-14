@@ -32,7 +32,7 @@ namespace ProjectMakeMeUpzzz.Handlers
             };
         }
 
-        public static Response<List<TransactionDetail>> GetTransactionDetailById(int id)
+        public static Response<List<TransactionDetail>> GetTransactionDetailByTransactionId(int id)
         {
             List<TransactionDetail> transactionDetail = TransactionDetailRepositories.GetTransactionDetailByTransactionId(id);
             if (transactionDetail != null)

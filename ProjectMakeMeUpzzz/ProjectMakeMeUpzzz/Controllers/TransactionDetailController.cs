@@ -10,9 +10,9 @@ namespace ProjectMakeMeUpzzz.Controllers
 {
     public class TransactionDetailController
     {
-        public static Response<List<TransactionDetail>> GetTransactionDetailById(int id)
+        public static Response<List<TransactionDetail>> GetTransactionDetailByTransactionId(int id)
         {
-            return TransactionDetailHandler.GetTransactionDetailById(id);
+            return TransactionDetailHandler.GetTransactionDetailByTransactionId(id);
         }
     }
 }

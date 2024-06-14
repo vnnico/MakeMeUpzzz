@@ -24,12 +24,12 @@ namespace ProjectMakeMeUpzzz.Views
         protected global::System.Web.UI.WebControls.Label lbl_error;
 
         /// <summary>
-        /// gvTransactionsHs control.
+        /// GridViewTransactionHistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvTransactionsHs;
+        protected global::System.Web.UI.WebControls.GridView GridViewTransactionHistory;
     }
 }
