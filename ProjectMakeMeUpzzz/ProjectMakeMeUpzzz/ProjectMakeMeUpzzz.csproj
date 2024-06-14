@@ -44,6 +44,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -80,6 +87,70 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Content Include="bin\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.CommLayer.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.CommonControls.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.Controllers.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.DataDefModel.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.Prompting.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll" />
+    <Content Include="bin\CrystalDecisions.ReportSource.dll" />
+    <Content Include="bin\CrystalDecisions.Shared.dll" />
+    <Content Include="bin\CrystalDecisions.Web.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\ProjectMakeMeUpzzz.dll" />
+    <Content Include="bin\ProjectMakeMeUpzzz.pdb" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.Globalization.Calendars.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.ZipFile.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Net.Http.dll" />
+    <Content Include="bin\roslyn\System.Net.Sockets.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\stdole.dll" />
     <Content Include="Models\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
@@ -90,6 +161,14 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="obj\Debug\ProjectMakeMeUpzzz.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ProjectMakeMeUpzzz.dll" />
+    <Content Include="obj\Debug\ProjectMakeMeUpzzz.pdb" />
+    <Content Include="obj\Debug\TempPE\Dataset.DataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Models.Model.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Models.Model.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Models.Model.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Reports.CrystalReport1.cs.dll" />
     <Content Include="Views\HandleTransaction.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\InsertMakeUp.aspx" />
@@ -100,8 +179,9 @@
     <Content Include="Views\OrderMakeUp.aspx" />
     <Content Include="Views\Profile.aspx" />
     <Content Include="Views\Register.aspx" />
-    <Content Include="Views\TransactionDetailPages.aspx" />
+    <Content Include="Views\TransactionDetailPage.aspx" />
     <Content Include="Views\TransactionHistory.aspx" />
+    <Content Include="Views\TransactionReport.aspx" />
     <Content Include="Views\UpdateMakeUp.aspx" />
     <Content Include="Views\UpdateMakeUpBrand.aspx" />
     <Content Include="Views\UpdateMakeUpType.aspx" />
@@ -170,7 +250,15 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Repositories\CartRepositories.cs" />
     <Compile Include="Repositories\MakeUpBrandRepositories.cs" />
     <Compile Include="Repositories\MakeUpRepositories.cs" />
@@ -263,12 +351,12 @@
     <Compile Include="Views\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\TransactionDetailPages.aspx.cs">
-      <DependentUpon>TransactionDetailPages.aspx</DependentUpon>
+    <Compile Include="Views\TransactionDetailPage.aspx.cs">
+      <DependentUpon>TransactionDetailPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\TransactionDetailPages.aspx.designer.cs">
-      <DependentUpon>TransactionDetailPages.aspx</DependentUpon>
+    <Compile Include="Views\TransactionDetailPage.aspx.designer.cs">
+      <DependentUpon>TransactionDetailPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\TransactionHistory.aspx.cs">
       <DependentUpon>TransactionHistory.aspx</DependentUpon>
@@ -276,6 +364,13 @@
     </Compile>
     <Compile Include="Views\TransactionHistory.aspx.designer.cs">
       <DependentUpon>TransactionHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransactionReport.aspx.cs">
+      <DependentUpon>TransactionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TransactionReport.aspx.designer.cs">
+      <DependentUpon>TransactionReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\UpdateMakeUp.aspx.cs">
       <DependentUpon>UpdateMakeUp.aspx</DependentUpon>
@@ -324,10 +419,32 @@
     <Content Include="Dataset\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
+    <Content Include="bin\ProjectMakeMeUpzzz.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include=".vs\ProjectMakeMeUpzzz.csproj.dtbcache.json" />
     <None Include="Dataset\DataSet1.xsd" />
     <Content Include="Dataset\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\Model.csdl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\Model.msl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\Model.ssdl" />
+    <Content Include="obj\Debug\ProjectM.3C78D3DE.Up2Date" />
+    <Content Include="obj\Debug\ProjectMakeMeUpzzz.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\ProjectMakeMeUpzzz.csproj.CopyComplete" />
+    <Content Include="obj\Debug\ProjectMakeMeUpzzz.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Release\ProjectMakeMeUpzzz.csproj.AssemblyReference.cache" />
     <None Include="packages.config" />
     <Content Include="Views\Master.Master" />
     <None Include="Web.Debug.config">
@@ -337,9 +454,15 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

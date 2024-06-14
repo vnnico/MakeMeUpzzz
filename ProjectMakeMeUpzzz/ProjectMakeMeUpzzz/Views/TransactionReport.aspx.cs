@@ -16,7 +16,7 @@ namespace ProjectMakeMeUpzzz.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CrystalReport1 report = new CrystalReport1();
+            CrystalReport1 report = new CrystalReport1();   
             CrystalReportViewer1.ReportSource = report;
             DataSet1 data = getData(TransactionHandler.GetTransactionHeaders());
             report.SetDataSource(data);
@@ -24,9 +24,9 @@ namespace ProjectMakeMeUpzzz.Views
 
         private DataSet1 getData(List<TransactionHeader> transactions)
         {
-            DataSet1 data = new DataSet1();
-            var headertable = data.TransactionHeaders;
-            var detailtable = data.TransactionDetails;
+            DataSet1 newdata = new DataSet1();
+            var headertable = newdata.TransactionHeaders;
+            var detailtable = newdata.TransactionDetails;
             foreach (TransactionHeader t in transactions)
             {
                 var hrow = headertable.NewRow();
@@ -36,17 +36,22 @@ namespace ProjectMakeMeUpzzz.Views
                 hrow["Status"] = t.Status;
                 headertable.Rows.Add(hrow);
 
-                //foreach (TransactionDetail d in t.TransactionDetails)
-                //{
-                //    var drow = detailtable.NewRow();
-                //    drow["TransactionDetailID"] = d.TransactionDetailID;
-                //    drow["TransactionID"] = d.TransactionID;
-                //    drow["MakeupID"] = d.MakeupID;
-                //    drow["Quantity"] = d.Quantity;
-                //    detailtable.Rows.Add(drow);
-                //}
+                foreach (TransactionDetail d in t.TransactionDetails)
+                {
+                    var drow = detailtable.NewRow();
+                    drow["TransactionDetailID"] = d.TransactionDetailID;
+                    drow["TransactionID"] = d.TransactionID;
+                    drow["MakeupID"] = d.MakeupID;
+                    drow["Quantity"] = d.Quantity;  
+                    detailtable.Rows.Add(drow);
+                }
             }
-            return data;
+            return newdata;
+        }
+
+        protected void CrystalReportViewer1_Init(object sender, EventArgs e)
+        {
+
         }
     }
 }
