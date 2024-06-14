@@ -54,26 +54,24 @@ namespace ProjectMakeMeUpzzz.Views
             string email = Convert.ToString(TextBoxEmail.Text);
             DateTime dob = DateTime.Parse(TextBoxDOB.Text);
             String gender = RadioButtonListGender.SelectedValue;
-                
+
 
 
             Response<User> response = UserController.UpdateUserData(id, username, email, dob, gender);
+
+            if (response.IsSuccess)
             {
-                if (response.IsSuccess)
-                {
-                    Response.Write("<script>alert(" + response.Message + ");</script>");
-                    Session["user"] = UserController.GetUserById(id).Payload;
-                }
-                else
-                {
-                    errorlabel.Visible = true;
-                    errorlabel.Text = response.Message;
-                }
-
-                Response.Redirect("~/Views/Login.aspx");
-
-
+                //Session["user"] = UserController.GetUserById(id).Payload;
+                Response.Redirect("~/Views/Profile.aspx");
             }
+            else
+            {
+                errorlabel.Text = response.Message;
+            }
+
+
+
+
         }
     }
 }

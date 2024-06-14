@@ -8,7 +8,7 @@ namespace ProjectMakeMeUpzzz.Factory
 {
     public class TransactionsDetailsFactories
     {
-        public static TransactionDetail CreateTransactionDetail(int transactionDetailID, int  transactionId, int makeupId, int quantity)
+        public static TransactionDetail Create(int transactionDetailID, int  transactionId, int makeupId, int quantity)
         {
             return new TransactionDetail
             {
@@ -19,12 +19,5 @@ namespace ProjectMakeMeUpzzz.Factory
             };
         }
 
-        
-        /*
-        internal static TransactionDetail CreateTransactionDetail(int v, int transactionID, int makeupId, int quantity)
-        {
-            throw new NotImplementedException();
-        } 
-        */
     }
 }

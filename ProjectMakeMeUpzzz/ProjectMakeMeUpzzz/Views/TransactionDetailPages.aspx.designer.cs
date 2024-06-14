@@ -11,12 +11,8 @@ namespace ProjectMakeMeUpzzz.Views
 {
 
 
-<<<<<<<< HEAD:ProjectMakeMeUpzzz/ProjectMakeMeUpzzz/Views/TransactionDetailPages.aspx.designer.cs
     public partial class TransactionDetailPages
-========
-    public partial class TransactionDetailPage
->>>>>>>> CrystalReportss:ProjectMakeMeUpzzz/ProjectMakeMeUpzzz/Views/TransactionDetailPage.aspx.designer.cs
-    {
+    { 
 
         /// <summary>
         /// ButtonBack control.

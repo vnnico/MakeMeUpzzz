@@ -8,7 +8,12 @@ namespace ProjectMakeMeUpzzz.Repositories
 {
     public class MakeUpTypeRepositories
     {
-        private static readonly DatabaseEntities3 db = new DatabaseEntities3();
+        private static DatabaseEntities3 db = new DatabaseEntities3();
+
+        public static List<MakeupType> GetAllMakeupTypes()
+        {
+            return db.MakeupTypes.ToList();
+        }
         public static MakeupType GetMakeupTypeById(int id)
         {
             return db.MakeupTypes.Find(id);
@@ -17,10 +22,7 @@ namespace ProjectMakeMeUpzzz.Repositories
         {
             return db.MakeupTypes.ToList().LastOrDefault();
         }
-        public static List<MakeupType> GetAllMakeupTypes()
-        {
-            return db.MakeupTypes.ToList();
-        }
+
         public static int InsertMakeupType(MakeupType makeup)
         {
             db.MakeupTypes.Add(makeup);
@@ -28,18 +30,22 @@ namespace ProjectMakeMeUpzzz.Repositories
         }
         public static MakeupType UpdateMakeupType(MakeupType makeup)
         {
-            MakeupType updatedMakeupType = db.MakeupTypes.Find(makeup.MakeupTypeID);
+            MakeupType updatedMakeupType = GetMakeupTypeById(makeup.MakeupTypeID);
             updatedMakeupType.MakeupTypeName = makeup.MakeupTypeName;
             db.SaveChanges();
+
             return makeup;
         }
         public static int DeleteMakeupTypeById(int id)
         {
-            MakeupType deletedMakeupType = db.MakeupTypes.Find(id);
+            MakeupType deletedMakeupType = GetMakeupTypeById(id);
+
+
             if (deletedMakeupType != null)
             {
                 db.MakeupTypes.Remove(deletedMakeupType);
             }
+
             return db.SaveChanges();
         }
     }

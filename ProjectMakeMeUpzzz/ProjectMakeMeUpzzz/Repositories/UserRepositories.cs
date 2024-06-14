@@ -32,7 +32,7 @@ namespace ProjectMakeMeUpzzz.Repositories
             return db.Users.Where(u => u.Username == username).FirstOrDefault();
         }
 
-        public static int RegisterUser(User user)
+        public static int AddUser(User user)
         {
             db.Users.Add(user);
 

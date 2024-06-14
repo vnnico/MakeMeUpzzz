@@ -18,7 +18,7 @@ namespace ProjectMakeMeUpzzz.Views
         protected User user;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if (Session["user"] == null && Request.Cookies["user_auth"] == null)
             {
                 Response.Redirect("Login.aspx");
@@ -50,24 +50,23 @@ namespace ProjectMakeMeUpzzz.Views
 
         protected void submitMakeUpType_Click(object sender, EventArgs e)
         {
-            try
-            {
-                String typeName = txt_Name.Text;
-                Response<MakeupType> response = MakeupTypeController.InsertMakeupType(typeName);
-                if (response.IsSuccess)
-                {
-                    Response.Redirect("~/Views/ManageMakeUp.aspx");
-                }
 
-                lbl_Error.Text = response.Message;
-                lbl_Error.Visible = true;
-
-            }
-            catch (Exception ex)
+            String typeName = txt_Name.Text;
+            Response<MakeupType> response = MakeupTypeController.InsertMakeupType(typeName);
+            if (response.IsSuccess)
             {
-                lbl_Error.Text = ex.Message;
-                lbl_Error.Visible = true;
+                Response.Redirect("~/Views/ManageMakeUp.aspx");
             }
+
+            lbl_Error.Text = response.Message;
+
+        }
+
+
+
+        protected void ButtonBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/ManageMakeUp.aspx");
         }
     }
 }

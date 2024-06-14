@@ -11,14 +11,14 @@ namespace ProjectMakeMeUpzzz.Handlers
 {
     public class TransactionDetailHandler
     {
-        public static Response<TransactionDetail> InsertTransactionDetail(int transactionID, int makeupId, int quantity)
+        public static Response<TransactionDetail> AddTransactionDetail(int transactionID, int makeupId, int quantity)
         {
-            TransactionDetail transactionDetail = TransactionsDetailsFactories.CreateTransactionDetail(GenerateID(),transactionID, makeupId, quantity);
-            if (TransactionDetailRepositories.InsertTransactionDetail(transactionDetail) == 0)
+            TransactionDetail transactionDetail = TransactionsDetailsFactories.Create(GenerateNewID(), transactionID, makeupId, quantity);
+            if (TransactionDetailRepositories.addTransactionDetail(transactionDetail) == 0)
             {
                 return new Response<TransactionDetail>
                 {
-                    Message = "Failed to insert transaction detail",
+                    Message = "Failed to add transaction detail",
                     IsSuccess = false,
                     Payload = null
                 };
@@ -26,33 +26,33 @@ namespace ProjectMakeMeUpzzz.Handlers
 
             return new Response<TransactionDetail>
             {
-                Message = "Success",
+                Message = "Transaction detail added successfully",
                 IsSuccess = true,
                 Payload = transactionDetail
             };
         }
 
-        public static Response<List<TransactionDetail>> GetTransactionDetailByTransactionId(int id)
+        public static Response<List<TransactionDetail>> RetrieveTransactionDetailByTransactionId(int id)
         {
-            List<TransactionDetail> transactionDetail = TransactionDetailRepositories.GetTransactionDetailByTransactionId(id);
-            if (transactionDetail != null)
+            List<TransactionDetail> transactionDetails = TransactionDetailRepositories.GetTransactionDetailByTransactionId(id);
+            if (transactionDetails != null)
             {
                 return new Response<List<TransactionDetail>>
                 {
-                    Message = "Success",
+                    Message = "Transaction details retrieved successfully",
                     IsSuccess = true,
-                    Payload = transactionDetail
+                    Payload = transactionDetails
                 };
             }
             return new Response<List<TransactionDetail>>
             {
-                Message = "no transaction detail",
+                Message = "No transaction details found",
                 IsSuccess = false,
                 Payload = null
             };
         }
 
-        public static Response<TransactionDetail> DeleteTransactionDetails(int transactionId)
+        public static Response<TransactionDetail> RemoveTransactionDetails(int transactionId)
         {
             if (TransactionDetailRepositories.DeleteTransactionDetails(transactionId) == 0)
             {
@@ -66,13 +66,13 @@ namespace ProjectMakeMeUpzzz.Handlers
 
             return new Response<TransactionDetail>
             {
-                Message = "Success",
+                Message = "Transaction details deleted successfully",
                 IsSuccess = true,
                 Payload = null
             };
         }
 
-        private static int GenerateID()
+        private static int GenerateNewID()
         {
             TransactionDetail lastTransactionDetail = TransactionDetailRepositories.GetLastTransactionDetail();
             if (lastTransactionDetail == null)
@@ -81,11 +81,5 @@ namespace ProjectMakeMeUpzzz.Handlers
             }
             return lastTransactionDetail.TransactionDetailID + 1;
         }
-
-        /*
-        internal static Response<TransactionDetail> InsertTransactionDetail(int transactionID, int makeupID, int? quantity)
-        {
-            throw new NotImplementedException();
-        } */
     }
 }

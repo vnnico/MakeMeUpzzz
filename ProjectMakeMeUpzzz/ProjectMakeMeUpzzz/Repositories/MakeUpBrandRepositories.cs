@@ -8,7 +8,11 @@ namespace ProjectMakeMeUpzzz.Repositories
 {
     public class MakeUpBrandRepositories
     {
-        private static readonly DatabaseEntities3 db = new DatabaseEntities3();
+        private static DatabaseEntities3 db = new DatabaseEntities3();
+        public static List<MakeupBrand> GetAllMakeupBrands()
+        {
+            return db.MakeupBrands.OrderByDescending(brand => brand.MakeupBrandRating).ToList();
+        }
         public static MakeupBrand GetMakeupBrandById(int id)
         {
             return db.MakeupBrands.Find(id);
@@ -17,23 +21,23 @@ namespace ProjectMakeMeUpzzz.Repositories
         {
             return db.MakeupBrands.ToList().LastOrDefault();
         }
-        public static List<MakeupBrand> GetAllMakeupBrands()
+
+        public static MakeupBrand AddMakeUpBrand(MakeupBrand makeupBrand)
         {
-            return db.MakeupBrands.ToList();
-        }
-        public static int InsertMakeupBrand(MakeupBrand makeup)
-        {
-            db.MakeupBrands.Add(makeup);
-            return db.SaveChanges();
+            db.MakeupBrands.Add(makeupBrand);
+            db.SaveChanges();
+            return makeupBrand;
         }
 
         public static MakeupBrand UpdateMakeupBrand(MakeupBrand makeup)
         {
-            MakeupBrand updatedMakeupBrand = db.MakeupBrands.Find(makeup.MakeupBrandID);
-            updatedMakeupBrand.MakeupBrandName = makeup.MakeupBrandName;
-            updatedMakeupBrand.MakeupBrandRating = makeup.MakeupBrandRating;
+            MakeupBrand makeupBrand = db.MakeupBrands.Find(makeup.MakeupBrandID);
+            makeupBrand.MakeupBrandName = makeup.MakeupBrandName;
+            makeupBrand.MakeupBrandRating = makeup.MakeupBrandRating;
+
             db.SaveChanges();
-            return makeup;
+
+            return makeupBrand;
         }
         public static int DeleteMakeupBrandById(int id)
         {

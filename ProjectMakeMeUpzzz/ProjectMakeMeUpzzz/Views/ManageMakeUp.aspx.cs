@@ -159,9 +159,10 @@ namespace ProjectMakeMeUpzzz.Views
         protected void BrandGV_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             GridViewRow row = BrandGV.Rows[e.RowIndex];
-            String id = row.Cells[0].Text.ToString();
+            int id = Convert.ToInt32(row.Cells[0].Text.ToString());
+            
 
-            Response<MakeupBrand> response = MakeupBrandController.RemoveMakeupBrandById(id);
+            Response<MakeupBrand> response = MakeupBrandController.RemoveMakeupBrandById(Convert.ToString(id));
             if (response.IsSuccess)
             {
                 Response<List<MakeupBrand>> responses = MakeupBrandController.GetAllMakeupBrands();

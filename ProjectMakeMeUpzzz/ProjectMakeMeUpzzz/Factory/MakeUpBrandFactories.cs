@@ -10,7 +10,7 @@ namespace ProjectMakeMeUpzzz.Factory
 
 
     {
-        public static MakeupBrand CreateMakeUpBrand(int makeupBrandID, string makeupBrandName, int makeupBrandRating)
+        public static MakeupBrand Create(int makeupBrandID, string makeupBrandName, int makeupBrandRating)
         {
             return new MakeupBrand
             {

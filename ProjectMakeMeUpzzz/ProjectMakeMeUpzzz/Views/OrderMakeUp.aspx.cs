@@ -35,6 +35,13 @@ namespace ProjectMakeMeUpzzz.Views
                     user = (User)Session["user"];
                 }
 
+                if (user.UserRole == "admin")
+                {
+
+
+                    Response.Redirect("~/Views/Home.aspx");
+                }
+
                 if (!IsPostBack)
                 {
                     Response<List<Makeup>> responses = MakeupController.GetAllMakeups();
@@ -43,7 +50,7 @@ namespace ProjectMakeMeUpzzz.Views
                         GridViewOrder.DataSource = responses.Payload;
                         GridViewOrder.DataBind();
 
-                        Response<List<Cart>> cartResponse = CartController.GetCartByUserId(user.UserID);
+                        Response<List<Cart>> cartResponse = CartController.GetCartsByUserId(user.UserID);
                         if (cartResponse.IsSuccess)
                         {
                             GridViewCart.DataSource = cartResponse.Payload;
@@ -67,7 +74,7 @@ namespace ProjectMakeMeUpzzz.Views
             Response<Cart> response = CartController.InsertCart(user.UserID, makeupID, quantity);
             if (response.IsSuccess)
             {
-                Response<List<Cart>> newCart = CartController.GetCartByUserId(user.UserID);
+                Response<List<Cart>> newCart = CartController.GetCartsByUserId(user.UserID);
                 if (newCart.IsSuccess)
                 {
                     GridViewCart.DataSource = newCart.Payload;
@@ -85,15 +92,12 @@ namespace ProjectMakeMeUpzzz.Views
         {
             User user = (User)Session["user"];
             List<int> cartIDs = new List<int>();
-            Response<List<Cart>> carts = CartController.GetCartByUserId(user.UserID);
+            Response<List<Cart>> carts = CartController.GetCartsByUserId(user.UserID);
             if (carts.IsSuccess)
             {
-                foreach (Cart cart in carts.Payload)
-                {
-                    cartIDs.Add(cart.CartID);
-                }
+             
 
-                Response<List<Cart>> response = CartController.RemoveCartsById(cartIDs);
+                Response<Cart> response = CartController.RemoveAllCartsByUserID(user.UserID);
                 if (response.IsSuccess)
                 {
                     Response.Redirect("~/Views/OrderMakeUp.aspx");
@@ -104,7 +108,7 @@ namespace ProjectMakeMeUpzzz.Views
         protected void ButtonCheckout_Click(object sender, EventArgs e)
         {
 
-            Response<List<Cart>> carts = CartController.GetCartByUserId(user.UserID);
+            Response<List<Cart>> carts = CartController.GetCartsByUserId(user.UserID);
             
             if (carts.IsSuccess)
             {

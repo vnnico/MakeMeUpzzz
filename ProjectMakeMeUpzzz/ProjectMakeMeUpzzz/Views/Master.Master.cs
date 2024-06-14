@@ -81,14 +81,25 @@ namespace ProjectMakeMeUpzzz.Views
 
         protected void ButtonLogOut_Click(object sender, EventArgs e)
         {
-            String[] cookies = Request.Cookies.AllKeys;
-            foreach (String cookie in cookies)
+
+            if (Session["user"] == null && Request.Cookies["user_auth"] == null)
             {
-                Response.Cookies[cookie].Expires = DateTime.Now.AddDays(-1);
+                Response.Redirect("~/Views/Login.aspx");
+            }
+            else
+            {
+
+                String[] cookies = Request.Cookies.AllKeys;
+                foreach (String cookie in cookies)
+                {
+                    Response.Cookies[cookie].Expires = DateTime.Now.AddDays(-1);
+                }
+
+                Session.Remove("user");
+                Response.Redirect("~/Views/Login.aspx");
             }
 
-            Session.Remove("user");
-            Response.Redirect("~/Views/Login.aspx");
+
         }
 
         protected void ButtonProfile_Click(object sender, EventArgs e)
@@ -132,5 +143,7 @@ namespace ProjectMakeMeUpzzz.Views
         {
             Response.Redirect("~/Views/TransactionReport.aspx");
         }
+
+        
     }
 }
